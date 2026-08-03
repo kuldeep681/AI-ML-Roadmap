@@ -35,7 +35,7 @@ Before learning Deep Learning, LLMs or RAG, you need to understand how Machine L
    - Course 2 - Advanced Learning Algorithms
    - Course 3 - Unsupervised Learning, Recommenders & Reinforcement Learning
 
-> Audit the course for free. Purchase the certificate only if you want it.
+> Audit the course for free. Purchase the certificate only if needed.
 
 ### Learn
 
