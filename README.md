@@ -119,6 +119,7 @@ AI-ML-Roadmap/
 ├── FAQ.md
 ├── CHANGELOG.md
 ├── LICENSE
+├── File-structure.md
 │
 ├── Phase-00-Engineering-Foundations.md
 ├── Phase-01-ML-Foundations-XGBoost.md
@@ -132,9 +133,39 @@ AI-ML-Roadmap/
 ├── Phase-09-PEFT-LoRA-QLoRA.md
 │
 ├── Projects/
+│   │
+│   ├── README.md
+│   ├── Project-01-Production-Customer-Churn-Prediction-Platform.md
+│   ├── Project-02-RAG-Knowledge-Platform.md
+│   └── Project-03-AI-Ticket-Workflow-Engine.md
+│
 ├── Interview-Preparation/
+│   │
+│   ├── README.md
+│   ├── AI-Engineer.md
+│   ├── ML-Engineer.md
+│   ├── LLM-Engineer.md
+│   ├── Applied-AI-Engineer.md
+│   ├── MLOps-Engineer.md
+│   ├── System-Design.md
+│   ├── HR-Questions.md
+│   └── Resume-Checklist.md
+│
 ├── DSA/
+│   │
+│   ├── README.md
+│   ├── Phase-01-Java-Basics.md
+│   ├── Phase-02-Arrays-Strings.md
+│   ├── Phase-03-Core-Patterns.md
+│   ├── Phase-04-Linear-Data-Structures.md
+│   ├── Phase-05-Trees-Heaps.md
+│   ├── Phase-06-Graphs-Greedy.md
+│   ├── Phase-07-Dynamic-Programming.md
+│   └── Revision-Plan.md
+│
 └── Learning-Resources/
+    │
+    └── README.md
 ```
 
 ---
