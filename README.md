@@ -59,3 +59,82 @@ AI-ML-Roadmap/
 ├── images/
 ├── diagrams/
 └── roadmap-banner.png
+
+# README.md
+
+# AI/ML + AI Engineering + MLOps Roadmap
+
+A structured roadmap to become job-ready for:
+
+- AI Engineer
+- Machine Learning Engineer
+- LLM Engineer
+- Applied AI Engineer
+- Entry-Level MLOps Engineer
+
+This roadmap focuses on practical skills, production-ready projects and interview preparation.
+
+---
+
+## Learning Tracks
+
+### Track 1
+
+AI/ML + AI Engineering + MLOps
+
+### Track 2
+
+Data Structures & Algorithms (Java)
+
+---
+
+## Roadmap
+
+- Phase 00 - Engineering Foundations
+- Phase 01 - Machine Learning Foundations + XGBoost
+- Phase 02 - FastAPI, Docker, CI/CD & AWS
+- Phase 03 - Deep Learning & PyTorch
+- Phase 04 - LLM Engineering
+- Phase 05 - RAG & Vector Databases
+- Phase 06 - AI Agents, LangGraph & MCP
+- Phase 07 - MLOps
+- Phase 08 - Kubernetes
+- Phase 09 - PEFT, LoRA & QLoRA
+
+---
+
+## Flagship Projects
+
+### Project 1
+
+Production Customer Churn Prediction System
+
+### Project 2
+
+RAG Knowledge Assistant
+
+### Project 3
+
+AI Ticket Workflow Engine
+
+---
+
+## DSA Track
+
+Complete alongside the AI roadmap.
+
+Target:
+
+220–250 quality problems.
+
+---
+
+## Repository Structure
+
+Refer to the folder structure below.
+
+---
+
+## Goal
+
+Finish all phases and build a portfolio suitable for AI Engineer, ML Engineer, LLM Engineer and Applied AI roles.
