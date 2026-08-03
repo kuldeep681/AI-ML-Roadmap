@@ -119,7 +119,6 @@ AI-ML-Roadmap/
 ├── FAQ.md
 ├── CHANGELOG.md
 ├── LICENSE
-├── File-structure.md
 │
 ├── Phase-00-Engineering-Foundations.md
 ├── Phase-01-ML-Foundations-XGBoost.md
