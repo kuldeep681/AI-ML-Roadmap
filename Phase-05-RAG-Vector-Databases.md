@@ -2,19 +2,23 @@
 
 ## Goal
 
-Learn how to build production-ready RAG applications using vector databases, document retrieval, evaluation, and observability.
+Build production-ready RAG systems using document retrieval, vector databases, evaluation, and observability.
 
-**Estimated Duration:** 6–8 Weeks
+**Estimated Duration:** 5–7 Weeks
 
 ---
 
 ## Why this Phase?
 
-Large Language Models don't know your private documents.
+LLMs cannot access your private data.
 
-RAG allows an LLM to retrieve relevant information before generating a response, making AI applications more accurate, reliable and useful.
+RAG allows you to:
 
-This is one of the most in-demand skills for AI Engineers today.
+- Retrieve relevant documents
+- Inject context into prompts
+- Generate accurate and grounded responses
+
+👉 This is one of the MOST important skills for AI Engineers.
 
 ---
 
@@ -22,12 +26,12 @@ This is one of the most in-demand skills for AI Engineers today.
 
 - Complete Phase 04
 - Comfortable with FastAPI
-- Understand LLM Fundamentals
-- Comfortable using Ollama or an LLM API
+- Understand LLM fundamentals
+- Experience with Ollama or LLM APIs
 
 ---
 
-## 5.1 LangChain for RAG
+## 5.1 RAG Fundamentals (LangChain - Focused)
 
 ### Resources
 
@@ -37,27 +41,23 @@ https://python.langchain.com/docs/tutorials/rag/
 
 ---
 
-### Learn
+### Learn (Core Only)
 
 - Documents
 - Document Loaders
 - Text Splitters
 - Embeddings
 - Retrievers
-- Chains
 - Prompt Templates
-- Output Parsers
+- Output Parsing
 
-> Focus only on the RAG components of LangChain.
-> Agent-related topics will be covered in Phase 06.
+⚠️ Ignore agents for now (covered in Phase 06)
 
 ---
 
-## 5.2 FAISS
+## 5.2 Vector Databases (FAISS First)
 
 ### Resource
-
-1. FAISS GitHub Repository
 
 https://github.com/facebookresearch/faiss
 
@@ -65,19 +65,16 @@ https://github.com/facebookresearch/faiss
 
 ### Learn
 
-- What is a Vector Database?
-- Vector Embeddings
-- Similarity Search
+- What are embeddings
+- Vector similarity search
 - Indexing
-- Top-K Retrieval
+- Top-K retrieval
 
 ---
 
-## 5.3 ChromaDB
+## 5.3 Persistence Layer (ChromaDB)
 
 ### Resource
-
-1. Chroma Documentation
 
 https://docs.trychroma.com/
 
@@ -85,21 +82,17 @@ https://docs.trychroma.com/
 
 ### Learn
 
-- Persistent Vector Storage
+- Persistent storage
 - Collections
-- Metadata
-- Filtering
+- Metadata filtering
 
-> Use ChromaDB only when persistence is required.
-> Start with FAISS first.
+👉 Use only after FAISS is clear
 
 ---
 
-## 5.4 RAG Evaluation
+## 5.4 Evaluation (Ragas)
 
 ### Resource
-
-1. Ragas Documentation
 
 https://docs.ragas.io/
 
@@ -111,15 +104,14 @@ https://docs.ragas.io/
 - Context Recall
 - Faithfulness
 - Answer Relevancy
-- Test Dataset Generation
+
+👉 Do NOT go too deep — focus on usage
 
 ---
 
-## 5.5 Observability
+## 5.5 Observability (Optional but Valuable)
 
 ### Resource
-
-1. Arize Phoenix Documentation
 
 https://docs.arize.com/phoenix
 
@@ -128,119 +120,161 @@ https://docs.arize.com/phoenix
 ### Learn
 
 - Tracing
-- Retrieval Debugging
-- Prompt Debugging
-- Response Analysis
+- Retrieval debugging
+- Prompt debugging
+
+👉 Optional but recommended for deeper understanding
 
 ---
 
-## Concepts to Learn
+## Core Concepts (Must Understand)
 
 ### Document Processing
 
-- PDF Loading
-- DOCX Loading
-- TXT Loading
-- Document Chunking
+- PDF / DOCX / TXT loading
+- Chunking strategies
 
 ### Embeddings
 
-- Sentence Embeddings
-- Embedding Models
+- Sentence embeddings
+- Embedding models (local preferred)
 
 ### Retrieval
 
-- Similarity Search
-- Metadata Filtering
-- Top-K Retrieval
+- Similarity search
+- Top-K retrieval
+- Metadata filtering
 
-### Response Generation
+### Generation
 
-- Prompt Construction
-- Context Injection
-- Source Citations
+- Prompt construction
+- Context injection
+- Source citations
 
 ### Reliability
 
-- Hallucination Handling
-- "I Don't Know" Responses
-- Response Grounding
+- Hallucination handling
+- "I don't know" fallback
+- Grounded responses
 
 ---
 
-## Flagship Project
+## ⚠️ Cost Policy
+
+- Prefer local embeddings (SentenceTransformers)
+- Prefer local LLM (Ollama)
+- Avoid heavy API usage
+- Keep datasets small
+
+---
+
+## Flagship Project (MANDATORY)
 
 ### RAG Knowledge Assistant
 
-### Tech Stack
+---
+
+## Project Goal
+
+Build a real-world AI system that:
+
+- Accepts documents
+- Builds a knowledge base
+- Answers questions using retrieved context
+- Provides source-backed answers
+
+---
+
+## Tech Stack
 
 - FastAPI
 - LangChain
-- FAISS
-- ChromaDB
-- Ollama or OpenAI/Gemini
+- FAISS (Primary)
+- ChromaDB (Optional)
+- Ollama (Primary)
+- OpenAI / Gemini (Optional)
 - Docker
 
 ---
 
-### Features
+## Features
 
-Document Upload
+### Document Ingestion
 
-- PDF
-- DOCX
-- TXT
-
-Knowledge Base
-
-- Document Chunking
-- Embedding Generation
-- FAISS Index
-- ChromaDB Persistence (Optional)
-
-Question Answering
-
-- Context Retrieval
-- Source Citations
-- Conversation History
-
-Evaluation
-
-- At least 20 Evaluation Questions
-- Ragas Evaluation Report
-
-Deployment
-
-- Docker
-- Hugging Face Spaces (UI)
-- AWS EC2 or Render (Backend)
+- Upload PDF / DOCX / TXT
+- Chunk documents
+- Generate embeddings
+- Store in FAISS
 
 ---
 
-### Build Order
+### Question Answering
 
-1. Document Upload
+- Retrieve relevant chunks
+- Inject into prompt
+- Generate response
+- Return source citations
+
+---
+
+### Conversation Support
+
+- Maintain chat history
+- Context-aware responses
+
+---
+
+### Evaluation
+
+- Create ~15–20 test questions
+- Run Ragas evaluation
+- Analyze results
+
+---
+
+### Observability (Optional)
+
+- Trace retrieval
+- Debug prompts
+- Analyze responses
+
+---
+
+## Build Order (IMPORTANT)
+
+1. Document Upload API
 2. Document Chunking
-3. Embedding Generation
-4. FAISS Retrieval
-5. Prompt Construction
-6. LLM Integration
-7. Source Citations
-8. Conversation History
-9. Ragas Evaluation
-10. Phoenix Observability
-11. Dockerize Application
-12. Deploy Application
+3. Embedding Generation (local)
+4. FAISS Index Setup
+5. Retrieval Pipeline
+6. Prompt Design
+7. LLM Integration
+8. Add Source Citations
+9. Add Conversation Memory
+10. Ragas Evaluation
+11. (Optional) Phoenix Observability
+12. Dockerize Application
+13. Deploy (FREE option preferred)
+
+---
+
+## Deployment (FREE FIRST)
+
+- Backend → Render / Railway
+- UI (optional) → Hugging Face Spaces
+- AWS EC2 → Optional (Free Tier only)
 
 ---
 
 ## Deliverables
 
-Project
+Project (Implemented in separate repo)
 
-- Production RAG Knowledge Assistant
+- RAG Knowledge Assistant
 
-Repository
+---
+
+## Repository Structure (Project Repo)
 
 ```text
 rag-knowledge-assistant/
@@ -256,48 +290,3 @@ rag-knowledge-assistant/
 ├── requirements.txt
 └── README.md
 ```
-
-Artifacts
-
-- Dockerized Application
-- FAISS Index
-- Ragas Evaluation Report
-- Phoenix Traces
-- Deployment
-
----
-
-## Skills Gained
-
-- LangChain
-- RAG Pipeline
-- Document Chunking
-- Embeddings
-- FAISS
-- ChromaDB
-- Vector Search
-- Source Grounding
-- RAG Evaluation
-- Phoenix Observability
-
----
-
-## Completion Criteria
-
-Move to **Phase 06** only after:
-
-- Completed the LangChain RAG Tutorial.
-- Built a complete RAG pipeline.
-- Implemented document ingestion.
-- Implemented FAISS retrieval.
-- Added source citations.
-- Maintained conversation history.
-- Evaluated using Ragas.
-- Debugged using Phoenix.
-- Dockerized and deployed the application.
-
----
-
-## Ready for Next Phase
-
-In **Phase 06**, you'll learn AI Agents, LangGraph and MCP to build reliable multi-step AI workflows with tool calling, memory, human approval and structured execution.

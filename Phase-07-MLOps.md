@@ -2,38 +2,35 @@
 
 ## Goal
 
-Transform your Machine Learning model into a reproducible, versioned, monitored and production-ready ML system using modern MLOps practices.
+Convert your ML system into a reproducible, versioned, automated and monitored production pipeline using MLOps practices.
 
-**Estimated Duration:** 8–10 Weeks
+**Estimated Duration:** 6–8 Weeks
 
 ---
 
 ## Why this Phase?
 
-Building an ML model is only the beginning.
+In real-world systems, ML is NOT just training models.
 
-In production, Machine Learning Engineers must also:
+You must:
 
-- Version datasets
 - Track experiments
-- Register models
-- Automate training
-- Validate data
-- Monitor model performance
+- Version data
+- Automate pipelines
+- Validate inputs
+- Monitor performance
 - Retrain models
-- Deploy reproducible pipelines
 
-This phase teaches you the complete Machine Learning lifecycle.
+👉 This phase makes your ML system production-ready.
 
 ---
 
 ## Prerequisites
 
 - Complete Phase 06
-- Customer Churn Prediction System
-- FastAPI Deployment
-- Docker
-- AWS EC2
+- Customer Churn Model (Phase 01)
+- FastAPI + Docker (Phase 02)
+- RAG + Agents understanding (Phase 05–06)
 
 ---
 
@@ -41,37 +38,30 @@ This phase teaches you the complete Machine Learning lifecycle.
 
 ### Resources
 
-1. MLOps Zoomcamp
+1. MLOps Zoomcamp  
+   https://github.com/DataTalksClub/mlops-zoomcamp
 
-https://github.com/DataTalksClub/mlops-zoomcamp
-
-2. MLOps Zoomcamp Overview
-
-https://datatalks.club/blog/mlops-zoomcamp.html
-
-> Follow the repository in order.
+2. Overview  
+   https://datatalks.club/blog/mlops-zoomcamp.html
 
 ---
 
-### Learn
+### Learn (High Level)
 
-MLOps Fundamentals
-
-- ML Lifecycle
+- ML lifecycle
 - Reproducibility
-- Experiment Tracking
-- Model Registry
-- Data Versioning
-- Deployment Pipeline
+- Experiment tracking
+- Model registry
+- Data versioning
 - Monitoring
 
+👉 Do NOT try to memorize — focus on flow
+
 ---
 
-## 7.2 Pandera
+## 7.2 Data Validation (Pandera)
 
 ### Resource
-
-1. Pandera Documentation
 
 https://pandera.readthedocs.io/
 
@@ -79,21 +69,18 @@ https://pandera.readthedocs.io/
 
 ### Learn
 
-Data Validation
-
-- Data Schemas
-- Column Validation
-- Data Types
+- Data schemas
+- Column validation
+- Type checking
 - Constraints
-- Validation Reports
+
+👉 Apply directly to your dataset
 
 ---
 
-## 7.3 DVC
+## 7.3 Data Versioning (DVC)
 
 ### Resource
-
-1. DVC Getting Started
 
 https://dvc.org/doc/start
 
@@ -101,21 +88,17 @@ https://dvc.org/doc/start
 
 ### Learn
 
-Data Versioning
+- Track datasets
+- Version data
+- DVC pipelines
 
-- Initialize DVC
-- Track Datasets
-- Remote Storage
-- Version Control
-- Pipelines
+👉 Use local storage (no cloud required)
 
 ---
 
-## 7.4 MLflow
+## 7.4 Experiment Tracking (MLflow)
 
 ### Resource
-
-1. MLflow Documentation
 
 https://mlflow.org/docs/latest/index.html
 
@@ -123,30 +106,23 @@ https://mlflow.org/docs/latest/index.html
 
 ### Learn
 
-Experiment Tracking
+- Track runs
+- Log parameters
+- Log metrics
+- Save artifacts
 
-- Runs
-- Parameters
-- Metrics
-- Artifacts
+#### Model Registry
 
-Model Registry
+- Register models
+- Version models
 
-- Register Models
-- Model Versions
-- Stage Management
-
-Model Serving
-
-- MLflow Serving Basics
+👉 Run MLflow locally (no paid infra)
 
 ---
 
-## 7.5 Prefect
+## 7.5 Workflow Automation (Prefect)
 
 ### Resource
-
-1. Prefect Get Started
 
 https://docs.prefect.io/latest/get-started/
 
@@ -154,21 +130,18 @@ https://docs.prefect.io/latest/get-started/
 
 ### Learn
 
-Workflow Automation
-
 - Flows
 - Tasks
 - Scheduling
 - Retries
-- Logging
+
+👉 Keep it simple — one pipeline is enough
 
 ---
 
-## 7.6 Evidently
+## 7.6 Monitoring (Evidently)
 
 ### Resource
-
-1. Evidently Documentation
 
 https://docs.evidentlyai.com/
 
@@ -176,177 +149,65 @@ https://docs.evidentlyai.com/
 
 ### Learn
 
-Monitoring
+- Data drift
+- Model drift
+- Data quality
 
-- Data Drift
-- Target Drift
-- Data Quality
-- Model Performance
-- Monitoring Reports
+👉 Generate reports locally
+
+---
+
+## ⚠️ Cost Policy
+
+- Run everything locally
+- Use free tools only
+- Avoid cloud unless required
+- AWS is OPTIONAL (free tier only)
 
 ---
 
 ## Apply to Flagship Project
 
-### Production Customer Churn Prediction System
-
-Upgrade your existing project.
+### Customer Churn Prediction System (Upgrade)
 
 ---
 
-### Add Features
+## Project Goal
 
-Data Validation
+Build a complete ML pipeline that:
 
-- Pandera Validation
-
-Data Versioning
-
-- DVC
-
-Experiment Tracking
-
-- MLflow
-
-Model Registry
-
-- MLflow Registry
-
-Workflow Automation
-
-- Prefect
-
-Deployment
-
-- Docker
-- AWS
-
-Monitoring
-
-- Evidently Reports
-
-CI/CD
-
-- GitHub Actions
+- Validates data
+- Tracks experiments
+- Versions datasets
+- Registers models
+- Automates training
+- Monitors performance
 
 ---
 
-### MLOps Pipeline
+## MLOps Pipeline
 
 ```text
 Raw Data
-    │
-    ▼
+   │
+   ▼
 Pandera Validation
-    │
-    ▼
+   │
+   ▼
 DVC Versioning
-    │
-    ▼
-Training Pipeline
-    │
-    ▼
+   │
+   ▼
+Training Pipeline (Prefect)
+   │
+   ▼
 MLflow Tracking
-    │
-    ▼
+   │
+   ▼
 Model Registry
-    │
-    ▼
-FastAPI
-    │
-    ▼
-Docker
-    │
-    ▼
-AWS EC2
-    │
-    ▼
-Evidently Monitoring
+   │
+   ▼
+FastAPI Inference
+   │
+   ▼
+Monitoring (Evidently)
 ```
-
----
-
-### Build Order
-
-1. Validate Dataset using Pandera
-2. Version Dataset using DVC
-3. Track Experiments using MLflow
-4. Register Best Model
-5. Build Prefect Training Pipeline
-6. Integrate GitHub Actions
-7. Deploy Updated API
-8. Generate Evidently Reports
-9. Monitor Production Model
-
----
-
-## Deliverables
-
-Project
-
-- Production Customer Churn Prediction System (MLOps Version)
-
-Repository
-
-```text
-customer-churn-prediction/
-│
-├── app/
-├── data/
-├── dvc.yaml
-├── flows/
-├── mlruns/
-├── monitoring/
-├── tests/
-├── Dockerfile
-├── docker-compose.yml
-├── .github/
-└── README.md
-```
-
-Artifacts
-
-- DVC Pipeline
-- MLflow Experiments
-- Model Registry
-- Prefect Flow
-- Evidently Reports
-- GitHub Actions Workflow
-- Docker Deployment
-
----
-
-## Skills Gained
-
-- MLOps Fundamentals
-- Data Validation
-- Data Versioning
-- Experiment Tracking
-- Model Registry
-- Workflow Automation
-- Model Monitoring
-- Production ML Pipelines
-- Continuous Integration
-- Continuous Deployment
-
----
-
-## Completion Criteria
-
-Move to **Phase 08** only after:
-
-- Completed the MLOps Zoomcamp.
-- Added Pandera validation.
-- Versioned data using DVC.
-- Tracked experiments using MLflow.
-- Registered the production model.
-- Automated training using Prefect.
-- Integrated GitHub Actions.
-- Generated Evidently monitoring reports.
-- Deployed the updated application.
-
----
-
-## Ready for Next Phase
-
-In **Phase 08**, you'll learn Kubernetes fundamentals and deploy your Dockerized Machine Learning application locally using Kubernetes.

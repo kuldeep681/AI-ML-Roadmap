@@ -1,6 +1,6 @@
 # AI/ML + AI Engineering + MLOps Roadmap
 
-A structured roadmap to become job-ready for:
+A structured, phase-wise roadmap to become job-ready for:
 
 - AI Engineer
 - Machine Learning Engineer
@@ -8,19 +8,26 @@ A structured roadmap to become job-ready for:
 - Applied AI Engineer
 - Entry-Level MLOps Engineer
 
-This roadmap focuses on practical learning, production-ready projects, interview preparation, and hands-on implementation instead of endless tutorials.
+This roadmap focuses on:
+
+- Practical learning
+- Production-ready systems
+- Real-world architecture
+- Interview preparation
+
+👉 No tutorial hell. Only structured execution.
 
 ---
 
-## Learning Tracks
+## 🧭 Learning Tracks
 
-This roadmap consists of two parallel learning tracks:
+This roadmap consists of two parallel tracks:
 
-### Track 01
+### Track 01 — Core Track
 
 AI/ML + AI Engineering + MLOps
 
-### Track 02
+### Track 02 — Support Track
 
 Data Structures & Algorithms (Java)
 
@@ -30,23 +37,21 @@ Data Structures & Algorithms (Java)
 
 ## Overall Progress
 
-AI/ML Roadmap
+### AI/ML Roadmap
 
-**Phase 01 / Phase 09**
+Phase 01 / Phase 09
 
-```text
-██░░░░░░░░ 10%
-```
+██████████ 10%
 
-DSA Roadmap
+### DSA Roadmap
 
-```text
-░░░░░░░░░░ 0%
-```
+██████████ 0%
 
-Current Status
+---
 
-🟡 **Phase 01 — Machine Learning Foundations + XGBoost**
+## 🟡 Current Status
+
+Phase 01 — Machine Learning Foundations + XGBoost
 
 ---
 
@@ -76,140 +81,73 @@ Complete:
 
 Then begin:
 
-- [ ] Project 01 - Production Customer Churn Prediction Platform
+- [ ] Project 01 — Customer Churn (Phase 01)
 
 ---
 
 ## 🗺️ Roadmap Journey
 
-```text
-✅ Engineering Foundations
-            │
-            ▼
-🟡 Machine Learning Foundations
-            │
-            ▼
-⬜ FastAPI, Docker & AWS
-            │
-            ▼
-⬜ Deep Learning
-            │
-            ▼
-⬜ LLM Engineering
-            │
-            ▼
-⬜ RAG
-            │
-            ▼
-⬜ AI Agents
-            │
-            ▼
-⬜ MLOps
-            │
-            ▼
-⬜ Kubernetes
-            │
-            ▼
-⬜ PEFT & LoRA
-```
+Engineering Foundations  
+↓  
+Machine Learning Foundations  
+↓  
+FastAPI, Docker & AWS  
+↓  
+Deep Learning  
+↓  
+LLM Engineering  
+↓  
+RAG  
+↓  
+AI Agents  
+↓  
+MLOps  
+↓  
+Kubernetes  
+↓  
+PEFT & LoRA
 
 ---
 
-## 📚 Quick Navigation
+## 📚 Roadmap Phases
 
-### Roadmap
-
-- Phase 00 - Engineering Foundations
-- Phase 01 - Machine Learning Foundations + XGBoost
-- Phase 02 - FastAPI, Docker, CI/CD & AWS
-- Phase 03 - Deep Learning & PyTorch
-- Phase 04 - LLM Engineering
-- Phase 05 - RAG & Vector Databases
-- Phase 06 - AI Agents, LangGraph & MCP
-- Phase 07 - MLOps
-- Phase 08 - Kubernetes
-- Phase 09 - PEFT, LoRA & QLoRA
+- Phase 00 — Engineering Foundations
+- Phase 01 — Machine Learning Foundations + XGBoost
+- Phase 02 — FastAPI, Docker, CI/CD & AWS
+- Phase 03 — Deep Learning & PyTorch
+- Phase 04 — LLM Engineering
+- Phase 05 — RAG & Vector Databases
+- Phase 06 — AI Agents, LangGraph & MCP
+- Phase 07 — MLOps
+- Phase 08 — Kubernetes
+- Phase 09 — PEFT, LoRA & QLoRA
 
 ---
 
-### Flagship Projects
+## 🚀 Flagship Projects
 
-- Project 01 - Production Customer Churn Prediction Platform
-- Project 02 - RAG Knowledge Platform
-- Project 03 - AI Ticket Workflow Engine
+Projects are built progressively across phases (NOT in one go).
 
----
+### Project 01 — Customer Churn Prediction System
 
-### DSA
+- Phase 01 → ML Model
+- Phase 07 → MLOps Pipeline
+- Phase 08 → Kubernetes Deployment
 
-- Java Basics
-- Arrays & Strings
-- Core Patterns
-- Linear Data Structures
-- Trees & Heaps
-- Graphs & Greedy
-- Dynamic Programming
+### Project 02 — RAG Knowledge Assistant
 
----
+- Phase 04 → RAG Foundations
+- Phase 05 → Full RAG System
 
-<details open>
+### Project 03 — AI Ticket Workflow Engine
 
-<summary><strong>📈 Phase Progress</strong></summary>
-
-| Phase                                             | Status         |
-| ------------------------------------------------- | -------------- |
-| Phase 00 - Engineering Foundations                | ✅ Completed   |
-| Phase 01 - Machine Learning Foundations + XGBoost | 🟡 In Progress |
-| Phase 02 - FastAPI, Docker, CI/CD & AWS           | ⬜ Not Started |
-| Phase 03 - Deep Learning & PyTorch                | ⬜ Not Started |
-| Phase 04 - LLM Engineering                        | ⬜ Not Started |
-| Phase 05 - RAG & Vector Databases                 | ⬜ Not Started |
-| Phase 06 - AI Agents, LangGraph & MCP             | ⬜ Not Started |
-| Phase 07 - MLOps                                  | ⬜ Not Started |
-| Phase 08 - Kubernetes                             | ⬜ Not Started |
-| Phase 09 - PEFT, LoRA & QLoRA                     | ⬜ Not Started |
-
-</details>
+- Phase 06 → Agent System
+- Phase 09 → Fine-Tuning & Optimization
 
 ---
 
-<details>
+## 📂 Repository Structure
 
-<summary><strong>🚀 Flagship Projects</strong></summary>
-
-| Project                                       | Status | Current Stage |
-| --------------------------------------------- | ------ | ------------- |
-| Production Customer Churn Prediction Platform | ⬜     | Not Started   |
-| RAG Knowledge Platform                        | ⬜     | Not Started   |
-| AI Ticket Workflow Engine                     | ⬜     | Not Started   |
-
-</details>
-
----
-
-<details>
-
-<summary><strong>🧠 DSA Progress</strong></summary>
-
-| Phase                  | Status |
-| ---------------------- | ------ |
-| Java Basics            | ⬜     |
-| Arrays & Strings       | ⬜     |
-| Core Patterns          | ⬜     |
-| Linear Data Structures | ⬜     |
-| Trees & Heaps          | ⬜     |
-| Graphs & Greedy        | ⬜     |
-| Dynamic Programming    | ⬜     |
-
-</details>
-
----
-
-<details>
-
-<summary><strong>📂 Repository Structure</strong></summary>
-
-```text
 AI-ML-Roadmap/
 │
 ├── README.md
@@ -229,73 +167,133 @@ AI-ML-Roadmap/
 ├── Phase-09-PEFT-LoRA-QLoRA.md
 │
 ├── Projects/
-│   ├── README.md
-│   ├── Project-01-Production-Customer-Churn-Prediction-Platform.md
-│   ├── Project-02-RAG-Knowledge-Platform.md
-│   └── Project-03-AI-Ticket-Workflow-Engine.md
+│ ├── README.md
+│ ├── 01_customer_churn_phase01.md
+│ ├── 02_customer_churn_phase07.md
+│ ├── 03_customer_churn_phase08.md
+│ ├── 04_rag_phase04.md
+│ ├── 05_rag_phase05.md
+│ ├── 06_ticket_engine_phase06.md
+│ ├── 07_ticket_engine_phase09.md
 │
 ├── Interview-Preparation/
-│   ├── README.md
-│   ├── AI-Engineer.md
-│   ├── ML-Engineer.md
-│   ├── LLM-Engineer.md
-│   ├── Applied-AI-Engineer.md
-│   ├── MLOps-Engineer.md
-│   ├── System-Design.md
-│   ├── HR-Questions.md
-│   └── Resume-Checklist.md
+│ ├── README.md
+│ ├── AI-Engineer.md
+│ ├── ML-Engineer.md
+│ ├── LLM-Engineer.md
+│ ├── Applied-AI-Engineer.md
+│ ├── MLOps-Engineer.md
+│ ├── System-Design.md
+│ ├── HR-Questions.md
+│ └── Resume-Checklist.md
 │
 ├── DSA/
-│   ├── README.md
-│   ├── Phase-01-Java-Basics.md
-│   ├── Phase-02-Arrays-Strings.md
-│   ├── Phase-03-Core-Patterns.md
-│   ├── Phase-04-Linear-Data-Structures.md
-│   ├── Phase-05-Trees-Heaps.md
-│   ├── Phase-06-Graphs-Greedy.md
-│   ├── Phase-07-Dynamic-Programming.md
-│   └── Revision-Plan.md
+│ ├── README.md
+│ ├── Phase-01-Java-Basics.md
+│ ├── Phase-02-Arrays-Strings.md
+│ ├── Phase-03-Core-Patterns.md
+│ ├── Phase-04-Linear-Data-Structures.md
+│ ├── Phase-05-Trees-Heaps.md
+│ ├── Phase-06-Graphs-Greedy.md
+│ ├── Phase-07-Dynamic-Programming.md
+│ └── Revision-Plan.md
 │
 └── Learning-Resources/
-    ├── README.md
-    ├── Phase-00/
-    ├── Phase-01/
-    ├── Phase-02/
-    ├── Phase-03/
-    ├── Phase-04/
-    ├── Phase-05/
-    ├── Phase-06/
-    ├── Phase-07/
-    ├── Phase-08/
-    └── Phase-09/
-```
-
-</details>
+├── README.md
+├── Phase-00/
+├── Phase-01/
+├── Phase-02/
+├── Phase-03/
+├── Phase-04/
+├── Phase-05/
+├── Phase-06/
+├── Phase-07/
+├── Phase-08/
+└── Phase-09/
 
 ---
 
-# 🎯 Goal
+## 📊 Progress Tracker
 
-Build a portfolio demonstrating production-ready skills in:
+### Phases
+
+- Phase 00 — Completed
+- Phase 01 — In Progress
+- Phase 02 — Not Started
+- Phase 03 — Not Started
+- Phase 04 — Not Started
+- Phase 05 — Not Started
+- Phase 06 — Not Started
+- Phase 07 — Not Started
+- Phase 08 — Not Started
+- Phase 09 — Not Started
+
+---
+
+### Projects
+
+- Customer Churn System — Not Started
+- RAG Knowledge Assistant — Not Started
+- AI Ticket Workflow Engine — Not Started
+
+---
+
+### DSA
+
+- Java Basics — Not Started
+- Arrays & Strings — Not Started
+- Core Patterns — Not Started
+- Linear Data Structures — Not Started
+- Trees & Heaps — Not Started
+- Graphs & Greedy — Not Started
+- Dynamic Programming — Not Started
+
+---
+
+## 🎯 Final Goal
+
+Build production-ready systems in:
 
 - Machine Learning
 - Deep Learning
 - LLM Engineering
-- Retrieval-Augmented Generation (RAG)
+- RAG Systems
 - AI Agents
-- LangGraph
-- MCP
 - MLOps
 - Cloud Deployment
 - Kubernetes
 
-By the end of this roadmap, the portfolio will contain:
+---
 
-- ✅ Production Customer Churn Prediction Platform
-- ✅ RAG Knowledge Platform
-- ✅ AI Ticket Workflow Engine
+## 🏁 Final Outcome
 
-making it suitable for entry-level roles such as:
+- Customer Churn Prediction System
+- RAG Knowledge Assistant
+- AI Ticket Workflow Engine
+
+---
+
+## ⚠️ Rules
+
+- Follow phases sequentially
+- Build projects phase-by-phase
+- Do NOT skip implementation
+- Store notes in Learning-Resources
+- Keep everything free-tier friendly
+
+---
+
+## 🤖 AI Usage
+
+You can directly ask:
+
+Help me complete this phase  
+or  
+Help me build this project phase
+
+---
+
+## 💼 Career Outcome
 
 - AI Engineer
 - Machine Learning Engineer

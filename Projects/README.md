@@ -1,64 +1,117 @@
 # Projects
 
-The roadmap contains three flagship projects.
+This folder contains **three flagship projects** built throughout the roadmap.
 
-These projects are built progressively throughout the roadmap instead of being completed in a single phase.
-
-Each project is designed to simulate a real production system and demonstrate industry-relevant skills.
-
----
-
-## Project 01
-
-Production Customer Churn Prediction System
-
-Purpose
-
-Learn the complete Machine Learning lifecycle, from model development to production deployment and MLOps.
-
-Phases
-
-- Phase 01
-- Phase 02
-- Phase 07
-- Phase 08
+These projects are **not completed in a single phase**.  
+Instead, each project is developed **step-by-step across multiple phases**, just like real-world systems evolve.
 
 ---
 
-## Project 02
+## 🧠 How to Use
 
-RAG Knowledge Assistant
+Each project is divided into **phase-specific `.md` files**.
 
-Purpose
+Every file defines:
 
-Learn Retrieval-Augmented Generation (RAG), vector databases, evaluation, observability and production deployment.
+- What to build in that phase
+- What already exists from previous phases
+- What will be extended in future phases
 
-Phases
-
-- Phase 04
-- Phase 05
-
----
-
-## Project 03
-
-AI Ticket Workflow Engine
-
-Purpose
-
-Build a production-ready AI Agent using Machine Learning, RAG, LangGraph and MCP.
-
-Phases
-
-- Phase 06
-- Phase 09
+👉 Always follow the roadmap phase-by-phase.  
+👉 Do NOT try to complete a project in one go.
 
 ---
 
-These projects together cover the skills required for:
+## 🚀 Project 01 — Customer Churn System
+
+**Production Customer Churn Prediction System**
+
+### Purpose
+
+Learn the complete Machine Learning lifecycle:
+
+- Model development
+- API building
+- MLOps pipeline
+- Deployment & scaling
+
+### Phases
+
+- Phase 01 → Core ML model
+- Phase 02 → FastAPI + Docker
+- Phase 07 → MLOps (DVC, MLflow, Prefect)
+- Phase 08 → Kubernetes deployment
+
+---
+
+## 📚 Project 02 — RAG Knowledge Assistant
+
+**Retrieval-Augmented Generation System**
+
+### Purpose
+
+Learn how to build LLM-powered knowledge systems:
+
+- Embeddings & vector databases
+- Retrieval pipelines
+- Evaluation & observability
+- API + deployment
+
+### Phases
+
+- Phase 04 → Foundations (embeddings, vector DB)
+- Phase 05 → Full RAG system
+
+---
+
+## 🤖 Project 03 — AI Ticket Workflow Engine
+
+**AI Agent-Based System**
+
+### Purpose
+
+Build a production-ready AI system using:
+
+- Machine Learning
+- RAG
+- AI Agents
+- LangGraph & MCP
+
+### Phases
+
+- Phase 06 → Agent system (workflows + tools)
+- Phase 09 → Fine-tuning & optimization
+
+---
+
+## 🎯 Outcome
+
+Together, these projects help you build real-world systems and prepare for roles such as:
 
 - AI Engineer
 - Machine Learning Engineer
 - LLM Engineer
 - Applied AI Engineer
 - Entry-Level MLOps Engineer
+
+---
+
+## ⚠️ Important
+
+- Projects evolve **phase-by-phase**
+- Each phase builds on the previous one
+- Focus on **progression, not completion in one step**
+
+---
+
+## 🤖 Using with AI
+
+You can give any project `.md` file to an AI and say:
+
+> “Help me build this project”
+
+Because each file contains:
+
+- Clear goal
+- Current stage
+- Next steps

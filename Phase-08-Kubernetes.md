@@ -2,7 +2,7 @@
 
 ## Goal
 
-Learn the fundamentals of Kubernetes and deploy your Dockerized Machine Learning application locally using Kubernetes.
+Understand Kubernetes fundamentals and deploy your Dockerized ML application locally using Kubernetes.
 
 **Estimated Duration:** 2–3 Weeks
 
@@ -10,13 +10,16 @@ Learn the fundamentals of Kubernetes and deploy your Dockerized Machine Learning
 
 ## Why this Phase?
 
-Docker allows you to package applications.
+Docker helps you package applications.
 
-Kubernetes allows you to deploy, scale and manage those Docker containers in production.
+Kubernetes helps you:
 
-You don't need to become a Kubernetes expert for entry-level AI/ML roles, but understanding the fundamentals is a valuable skill.
+- Deploy containers
+- Scale applications
+- Manage failures
+- Handle production environments
 
-This phase focuses only on the concepts and practical knowledge commonly expected in interviews.
+👉 You don’t need deep expertise — just strong fundamentals.
 
 ---
 
@@ -24,7 +27,15 @@ This phase focuses only on the concepts and practical knowledge commonly expecte
 
 - Complete Phase 07
 - Comfortable with Docker
-- Comfortable with Docker Compose
+- Understand Docker Compose
+
+---
+
+## ⚠️ Cost Policy
+
+- Use LOCAL Kubernetes only
+- Do NOT use paid cloud Kubernetes
+- No AWS EKS / GCP GKE required
 
 ---
 
@@ -32,65 +43,69 @@ This phase focuses only on the concepts and practical knowledge commonly expecte
 
 ### Resources
 
-1. Kubernetes Basics
+1. Kubernetes Basics  
+   https://kubernetes.io/docs/tutorials/kubernetes-basics/
 
-https://kubernetes.io/docs/tutorials/kubernetes-basics/
+2. Deployments  
+   https://kubernetes.io/docs/concepts/workloads/controllers/deployment/
 
-2. Kubernetes Deployments
-
-https://kubernetes.io/docs/concepts/workloads/controllers/deployment/
-
-3. Kubernetes Services
-
-https://kubernetes.io/docs/concepts/services-networking/service/
+3. Services  
+   https://kubernetes.io/docs/concepts/services-networking/service/
 
 ---
 
-### Learn
+### Learn (Focused)
 
-Core Concepts
+#### Core Architecture
 
-- Kubernetes Architecture
-- Control Plane
+- Control Plane (basic idea)
 - Worker Nodes
-- kubectl
+- kubectl usage
 
-Pods
+---
 
-- Pod
-- Multi-container Pod (Concept)
+#### Pods
 
-Deployments
+- What is a Pod
+- Single container vs multi-container (concept only)
+
+---
+
+#### Deployments
 
 - Deployment
 - ReplicaSet
 - Scaling
-- Rolling Updates
+- Rolling updates
 
-Services
+---
+
+#### Services
 
 - ClusterIP
-- NodePort
-- LoadBalancer (Concept)
+- NodePort (IMPORTANT)
+- LoadBalancer (concept only)
 
-Configuration
+---
+
+#### Config Management
 
 - ConfigMaps
 - Secrets
 
-Monitoring
+---
 
-- Logs
-- Describe Resources
-- Debugging
+#### Debugging
+
+- kubectl logs
+- kubectl describe
+- kubectl get
 
 ---
 
 ## 8.2 kind (Kubernetes in Docker)
 
 ### Resource
-
-1. kind Quick Start
 
 https://kind.sigs.k8s.io/docs/user/quick-start/
 
@@ -99,126 +114,99 @@ https://kind.sigs.k8s.io/docs/user/quick-start/
 ### Learn
 
 - Install kind
-- Create Local Cluster
-- kubectl with kind
-- Deploy Applications
-- Delete Cluster
+- Create cluster
+- Connect kubectl
+- Deploy apps
+- Delete cluster
 
 ---
 
-## Practice
+## Practice (MANDATORY)
 
-Deploy simple applications before deploying your ML project.
+Before your ML project:
 
-Practice
+### Step 1: Basic Deployment
 
 - Deploy Nginx
-- Scale Deployment
-- Expose Service
-- View Logs
-- Delete Resources
+- Expose via NodePort
+- Access in browser
+
+---
+
+### Step 2: Scaling
+
+- Increase replicas
+- Observe behavior
+
+---
+
+### Step 3: Debugging
+
+- View logs
+- Describe pod
+- Delete pod (auto recreate)
 
 ---
 
 ## Apply to Flagship Project
 
-### Production Customer Churn Prediction System
+### Customer Churn Prediction System
 
-Deploy the existing Dockerized application using Kubernetes.
+Deploy your existing Dockerized ML API using Kubernetes.
 
 ---
 
-### Add
+## Project Goal
 
-Kubernetes
+Run your ML system inside Kubernetes with:
 
 - Deployment
 - Service
-- ConfigMap
-- Secret
-
-Local Cluster
-
-- kind
+- Config management
+- Scaling
 
 ---
 
-### Build Order
+## What You Will Add
 
-1. Create kind Cluster
-2. Build Docker Image
-3. Create Deployment
-4. Create Service
-5. Create ConfigMap
-6. Create Secret
-7. Deploy Application
-8. Verify API
-9. Scale Deployment
-10. Inspect Logs
+Kubernetes Files
+
+- deployment.yaml
+- service.yaml
+- configmap.yaml
+- secret.yaml
 
 ---
 
-## Deliverables
+## Build Order (VERY IMPORTANT)
 
-Project
+1. Create kind cluster
+2. Build Docker image
+3. Load image into kind
+4. Create Deployment
+5. Create Service (NodePort)
+6. Access API locally
+7. Add ConfigMap
+8. Add Secret
+9. Scale replicas
+10. Test failure recovery (delete pod)
 
-- Customer Churn Prediction System (Kubernetes Deployment)
+---
 
-Repository
+## Deployment Flow
 
 ```text
-customer-churn-prediction/
-│
-├── app/
-├── kubernetes/
-│   ├── deployment.yaml
-│   ├── service.yaml
-│   ├── configmap.yaml
-│   └── secret.yaml
-├── Dockerfile
-├── docker-compose.yml
-└── README.md
+Docker Image
+     │
+     ▼
+Kubernetes Deployment
+     │
+     ▼
+Pods (Replicas)
+     │
+     ▼
+Service (NodePort)
+     │
+     ▼
+Local Access (Browser / Postman)
 ```
-
-Artifacts
-
-- Kubernetes Deployment
-- Kubernetes Service
-- ConfigMap
-- Secret
-- Local kind Cluster
-
----
-
-## Skills Gained
-
-- Kubernetes Basics
-- Pods
-- Deployments
-- Services
-- ConfigMaps
-- Secrets
-- Scaling
-- kubectl
-- kind
-- Local Kubernetes Deployment
-
----
-
-## Completion Criteria
-
-Move to **Phase 09** only after:
-
-- Completed the Kubernetes Basics tutorial.
-- Created a local kind cluster.
-- Deployed the application using Kubernetes.
-- Exposed the application using a Service.
-- Used ConfigMaps and Secrets.
-- Scaled the deployment.
-- Verified the application is running successfully.
-
----
-
-## Ready for Next Phase
-
-In **Phase 09**, you'll learn Parameter-Efficient Fine-Tuning (PEFT), LoRA and QLoRA, understand when fine-tuning is appropriate, and compare fine-tuning with prompting and RAG for real-world AI applications.

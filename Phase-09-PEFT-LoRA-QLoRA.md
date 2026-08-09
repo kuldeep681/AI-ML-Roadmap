@@ -2,23 +2,23 @@
 
 ## Goal
 
-Understand Parameter-Efficient Fine-Tuning (PEFT) techniques, learn LoRA and QLoRA, and compare fine-tuning with prompting and RAG for real-world AI applications.
+Learn parameter-efficient fine-tuning (PEFT), implement LoRA and QLoRA, and understand when to use fine-tuning vs RAG vs prompting in real-world systems.
 
-**Estimated Duration:** 4–6 Weeks
+**Estimated Duration:** 3–5 Weeks
 
 ---
 
 ## Why this Phase?
 
-Not every AI problem requires fine-tuning.
+Not every problem needs fine-tuning.
 
-A good AI Engineer should know:
+A strong AI Engineer knows:
 
-- When prompting is enough.
-- When RAG is a better solution.
-- When fine-tuning is actually required.
+- When prompting is enough
+- When RAG is better
+- When fine-tuning is required
 
-This phase focuses on making the right engineering decision rather than fine-tuning every model.
+👉 This phase is about **making the right decision**, not just training models.
 
 ---
 
@@ -27,36 +27,39 @@ This phase focuses on making the right engineering decision rather than fine-tun
 - Complete Phase 08
 - Comfortable with LLMs
 - Comfortable with RAG
-- Basic understanding of Hugging Face
+- Basic Hugging Face usage
 
 ---
 
-## 9.1 PEFT (Parameter-Efficient Fine-Tuning)
+## ⚠️ Cost Policy
 
-### Resources
+- Use FREE GPUs only (Kaggle / Colab)
+- Use SMALL models (no large expensive models)
+- Keep training lightweight
+- Avoid long training runs
 
-1. Hugging Face PEFT Documentation
+---
+
+## 9.1 PEFT Fundamentals
+
+### Resource
 
 https://huggingface.co/docs/peft
 
 ---
 
-### Learn
+### Learn (Core)
 
-PEFT Fundamentals
-
-- What is PEFT?
-- Why PEFT?
-- Full Fine-Tuning vs PEFT
-- Adapter-based Fine-Tuning
+- What is PEFT
+- Why PEFT vs full fine-tuning
+- Adapter-based tuning
+- Parameter efficiency concept
 
 ---
 
 ## 9.2 LoRA
 
-### Resources
-
-1. Hugging Face Transformers Training Guide
+### Resource
 
 https://huggingface.co/docs/transformers/training
 
@@ -64,13 +67,13 @@ https://huggingface.co/docs/transformers/training
 
 ### Learn
 
-LoRA
-
-- Low-Rank Adaptation
-- Trainable Adapters
+- Low-Rank Adaptation (LoRA)
+- Trainable adapters
 - Rank (r)
-- Target Modules
-- Training Workflow
+- Target modules
+- Training workflow
+
+👉 Focus on implementation, not math
 
 ---
 
@@ -78,63 +81,57 @@ LoRA
 
 ### Learn
 
-- Quantization
-- 4-bit Quantization
-- Memory Optimization
-- QLoRA Workflow
-- GPU Memory Saving
+- Quantization basics
+- 4-bit quantization
+- Memory optimization
+- Training on low GPU
+
+👉 This is key for low-resource systems
 
 ---
 
-## 9.4 Training Environment
+## 9.4 Training Setup (FREE)
 
-### Resources
+### Platforms
 
-1. Kaggle Notebooks
-
-https://www.kaggle.com/code
-
-2. Google Colab
-
-https://colab.research.google.com/
-
-Use free GPUs whenever available.
+- Kaggle (Preferred)
+- Google Colab
 
 ---
 
-## Learn
+### Learn
 
-Dataset Preparation
+#### Dataset Preparation
 
-- Dataset Formatting
-- Instruction Format
-- Prompt Format
-- Train / Validation Split
+- Instruction format
+- Prompt format
+- Train/validation split
 
-Evaluation
+#### Evaluation
 
 - Loss
-- Accuracy
-- Human Evaluation
-- Baseline Comparison
+- Accuracy (if classification)
+- Manual evaluation
+- Baseline comparison
 
 ---
 
-## Concepts to Learn
+## Core Concepts (VERY IMPORTANT)
 
-Decision Making
+### Decision Making
 
 - Prompting vs Fine-Tuning
 - RAG vs Fine-Tuning
 - LoRA vs QLoRA
-- When to Fine-Tune
-- Cost Comparison
+- When NOT to fine-tune
 
-Optimization
+---
+
+### Optimization
 
 - Quantization
-- Memory Usage
-- Inference Speed
+- Memory usage
+- Inference speed
 
 ---
 
@@ -144,40 +141,60 @@ Optimization
 
 ---
 
-### Tech Stack
+## Project Goal
 
-- Hugging Face Transformers
-- PEFT
-- LoRA
-- QLoRA
-- PyTorch
+Build a system that:
+
+- Fine-tunes a model using LoRA
+- Fine-tunes using QLoRA
+- Compares multiple approaches
+- Documents engineering decisions
 
 ---
 
-### Build Order
+## Suggested Models (Use Small Models)
 
-1. Prepare Dataset
-2. Choose Base Model
-3. Fine-Tune using LoRA
-4. Evaluate Results
-5. Fine-Tune using QLoRA
-6. Compare Performance
-7. Compare with Prompt Engineering
-8. Compare with XGBoost Baseline
-9. Compare with RAG Approach
-10. Document Findings
+- DistilBERT (classification)
+- Tiny LLaMA / small instruct models
+
+👉 Avoid large models (costly)
+
+---
+
+## Build Order (VERY IMPORTANT)
+
+1. Prepare dataset (clean + format)
+2. Train baseline model (existing ML model)
+3. Fine-tune using LoRA
+4. Evaluate results
+5. Fine-tune using QLoRA
+6. Compare LoRA vs QLoRA
+7. Compare with prompting approach
+8. Compare with RAG approach
+9. Document results (VERY IMPORTANT)
+
+---
+
+## What to Compare
+
+- Accuracy / performance
+- Cost
+- Latency
+- Complexity
 
 ---
 
 ## Deliverables
 
-Project
+Project (New Repo)
 
-- Fine-Tuned Ticket Classification Model
+- Fine-Tuned Ticket Classification System
 
-Repository
+---
 
-```text
+## Repository Structure
+
+```text id="9xrepo"
 ticket-classification-finetuning/
 │
 ├── dataset/
@@ -185,156 +202,7 @@ ticket-classification-finetuning/
 ├── models/
 ├── evaluation/
 ├── configs/
+├── scripts/
 ├── requirements.txt
 └── README.md
 ```
-
-Artifacts
-
-- LoRA Model
-- QLoRA Model
-- Evaluation Report
-- Performance Comparison
-- Training Configuration
-
----
-
-## Skills Gained
-
-- PEFT
-- LoRA
-- QLoRA
-- Dataset Preparation
-- Fine-Tuning
-- Quantization
-- Model Evaluation
-- Cost Optimization
-- Model Comparison
-
----
-
-## Completion Criteria
-
-Complete this phase only after:
-
-- Learned PEFT fundamentals.
-- Fine-tuned a model using LoRA.
-- Fine-tuned a model using QLoRA.
-- Compared LoRA and QLoRA.
-- Compared Prompting vs RAG vs Fine-Tuning.
-- Documented all experimental results.
-
----
-
-## Final Portfolio
-
-After completing the roadmap, your portfolio should contain:
-
-### Project 1
-
-Production Customer Churn Prediction System
-
-Stack
-
-- XGBoost
-- SHAP
-- FastAPI
-- PostgreSQL
-- Docker
-- GitHub Actions
-- AWS EC2
-- MLflow
-- DVC
-- Prefect
-- Pandera
-- Evidently
-- Kubernetes
-
----
-
-### Project 2
-
-RAG Knowledge Assistant
-
-Stack
-
-- LangChain
-- FAISS
-- ChromaDB
-- Ollama / OpenAI / Gemini
-- Ragas
-- Phoenix
-- FastAPI
-- Docker
-- AWS EC2 / Render
-
----
-
-### Project 3
-
-AI Ticket Workflow Engine
-
-Stack
-
-- FastAPI
-- React
-- LangGraph
-- MCP
-- RAG
-- AI Agents
-- PostgreSQL
-- Docker Compose
-
----
-
-### Project 4
-
-Fine-Tuned Ticket Classification
-
-Stack
-
-- Hugging Face Transformers
-- PEFT
-- LoRA
-- QLoRA
-- PyTorch
-
----
-
-## Roadmap Complete
-
-By completing all phases, you will have practical experience with:
-
-- Python Engineering
-- SQL & PostgreSQL
-- Machine Learning
-- XGBoost
-- Deep Learning
-- PyTorch
-- LLM Engineering
-- Prompt Engineering
-- RAG
-- Vector Databases
-- LangChain
-- LangGraph
-- MCP
-- AI Agents
-- MLOps
-- Kubernetes
-- PEFT
-- LoRA
-- QLoRA
-- Cloud Deployment
-- CI/CD
-- Docker
-- AWS
-
-These skills prepare you for roles such as:
-
-- AI Engineer
-- Machine Learning Engineer
-- LLM Engineer
-- Applied AI Engineer
-- Entry-Level MLOps Engineer
-
-The roadmap doesn't end here—it gives you a strong foundation to specialize further as your interests and career evolve.

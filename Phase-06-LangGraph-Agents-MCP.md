@@ -2,35 +2,34 @@
 
 ## Goal
 
-Learn how to build reliable AI Agents using LangGraph and Model Context Protocol (MCP), enabling LLMs to safely interact with external tools, APIs, and workflows.
+Build reliable AI Agents using LangGraph and MCP that can perform real-world tasks using tools, workflows, and structured execution.
 
-**Estimated Duration:** 6–8 Weeks
+**Estimated Duration:** 5–7 Weeks
 
 ---
 
 ## Why this Phase?
 
-LLMs can answer questions, but they cannot perform real-world tasks on their own.
+LLMs alone cannot perform real-world tasks.
 
-AI Agents extend LLMs by allowing them to:
+AI Agents enable LLMs to:
 
-- Use external tools
-- Access databases
-- Search knowledge bases
-- Call APIs
-- Execute multi-step workflows
-- Request human approval when needed
+- Use tools (APIs, DBs)
+- Execute workflows
+- Maintain state
+- Make decisions
+- Request human approval
 
-This phase teaches you how production AI Agents are built.
+👉 This is how real production AI systems are built.
 
 ---
 
 ## Prerequisites
 
 - Complete Phase 05
-- Comfortable with RAG
+- Comfortable with RAG pipelines
 - Comfortable with FastAPI
-- Understand Structured Outputs
+- Understand structured outputs (JSON + Pydantic)
 
 ---
 
@@ -38,64 +37,53 @@ This phase teaches you how production AI Agents are built.
 
 ### Resources
 
-1. OpenAI Function Calling Guide
+1. OpenAI Function Calling Guide  
+   https://platform.openai.com/docs/guides/function-calling
 
-https://platform.openai.com/docs/guides/function-calling
-
-2. Google Gemini Function Calling
-
-https://ai.google.dev/gemini-api/docs/function-calling
-
-> Learn the concepts even if you primarily use local models.
+2. Google Gemini Function Calling  
+   https://ai.google.dev/gemini-api/docs/function-calling
 
 ---
 
-### Learn
+### Learn (Core Only)
 
-Tool Calling
+- Function / Tool calling
+- JSON schema for tools
+- Tool input/output validation
+- Structured outputs
 
-- Function Calling
-- Tool Definitions
-- Tool Parameters
-- Structured Outputs
-- JSON Schema
-- Tool Validation
+#### Agent Basics
 
-Agent Basics
-
-- Tool Selection
-- Multi-step Reasoning
-- Error Handling
+- Tool selection
+- Multi-step reasoning (basic understanding)
+- Error handling
 
 ---
 
-## 6.2 LangGraph
+## 6.2 LangGraph (Core Engine)
 
-### Resources
-
-1. LangGraph Introduction
+### Resource
 
 https://langchain-ai.github.io/langgraph/tutorials/introduction/
 
 ---
 
-### Learn
+### Learn (Important)
 
-Core Concepts
+#### Core Concepts
 
 - Nodes
 - Edges
 - State
-- Graph Execution
-- Conditional Routing
+- Graph execution
+- Conditional routing
 
-Advanced Concepts
+#### Advanced (Focus, don’t overdo)
 
 - Persistence
 - Memory
 - Checkpoints
 - Human-in-the-loop
-- Error Recovery
 
 ---
 
@@ -103,184 +91,217 @@ Advanced Concepts
 
 ### Resources
 
-1. Hugging Face MCP Course - Unit 0
-
-https://huggingface.co/learn/mcp-course/en/unit0/introduction
-
-2. Hugging Face MCP Course - Unit 1
-
-https://huggingface.co/learn/mcp-course/en/unit1/introduction
-
-3. Build an MCP Server
-
-https://huggingface.co/learn/mcp-course/unit3/build-mcp-server
+1. https://huggingface.co/learn/mcp-course/en/unit0/introduction
+2. https://huggingface.co/learn/mcp-course/en/unit1/introduction
+3. https://huggingface.co/learn/mcp-course/unit3/build-mcp-server
 
 ---
 
 ### Learn
 
-MCP Basics
+#### Core Concepts
 
-- MCP Architecture
-- MCP Client
-- MCP Server
-- Resources
-- Tools
+- MCP architecture
+- MCP client & server
+- Tools & resources
 
-Implementation
+#### Implementation
 
-- Build an MCP Server
-- Register Tools
-- Tool Permissions
-- Tool Validation
+- Build MCP server
+- Register tools
+- Tool permissions
+- Tool validation
 
 ---
 
-## 6.4 AI Agent Security
+## 6.4 Agent Reliability & Security
 
 ### Learn
 
-Security
+#### Security
 
-- Prompt Injection
-- Tool Injection
-- Permission Control
-- Input Validation
-- Output Validation
+- Prompt injection
+- Tool injection
+- Permission control
+- Input validation
+- Output validation
 
-Reliability
+#### Reliability
 
-- Retry Logic
-- Error Recovery
+- Retry logic
+- Error recovery
 - Logging
-- Audit Trail
+- Audit trail
 
-Human Approval
+#### Human-in-the-loop
 
-- Human Review
-- Approval Workflow
-- High-Risk Action Handling
+- Approval workflows
+- Low-confidence handling
 
 ---
 
-## Concepts to Learn
+## ⚠️ Cost Policy
+
+- Prefer local LLMs (Ollama)
+- Use APIs only when needed
+- Avoid unnecessary tool calls
+- Keep workflows lightweight
+
+---
+
+## Core Concepts (Must Understand)
 
 ### AI Agents
 
-- Agent Architecture
-- Planning
-- Tool Usage
-- State Management
+- Agent architecture
+- Planning vs execution
+- Tool usage
+- State management
 
 ### LangGraph
 
-- Graph-based Workflows
-- State Persistence
-- Conditional Execution
+- Workflow graphs
+- Conditional execution
+- Persistent state
 
 ### MCP
 
-- Client-Server Communication
-- Tool Registration
-- Tool Execution
+- Tool-based communication
+- Safe execution layer
 
 ---
 
-## Flagship Project
+## Flagship Project (MANDATORY)
 
-### AI Ticket Workflow Engine
+### AI Ticket Workflow Engine (Upgrade)
 
-Upgrade your existing project.
+👉 Continue your existing project
 
 ---
 
-### Tech Stack
+## Project Goal
+
+Build a production-level AI system that:
+
+- Automates ticket workflows
+- Uses tools safely
+- Executes multi-step logic
+- Integrates ML + RAG + Agents
+
+---
+
+## Tech Stack
 
 - FastAPI
-- React
+- React (optional UI)
 - LangGraph
 - MCP
-- Ollama or OpenAI/Gemini
+- Ollama (Primary)
+- OpenAI/Gemini (Optional)
 - PostgreSQL
-- Docker
-
----
-
-### Add Features
-
-Machine Learning
-
-- Ticket Classification
-- Priority Prediction
-
-Knowledge
-
-- RAG over Support Documents
-
-Workflow
-
-- LangGraph Workflow
-- Multi-step Execution
-
-MCP Tools
-
-- Get Ticket
-- Update Ticket
-- Search Knowledge Base
-- Create Workflow Log
-
-Security
-
-- Role-Based Access Control (RBAC)
-- Tool Permissions
-- Audit Logs
-
-Reliability
-
-- Human Approval for Low Confidence Actions
-
-Deployment
-
 - Docker Compose
 
 ---
 
-### Build Order
+## Features
 
-1. Integrate Ticket Classification
-2. Integrate RAG
-3. Build LangGraph Workflow
-4. Build MCP Server
-5. Register MCP Tools
-6. Add Human Approval
-7. Add RBAC
-8. Add Audit Logs
-9. Docker Compose
-10. Deploy Application
+### ML Integration
+
+- Ticket classification
+- Priority prediction
 
 ---
 
-## Optional
+### Knowledge (RAG)
+
+- Search support documents
+- Context-aware responses
+
+---
+
+### Agent Workflow
+
+- Multi-step LangGraph flow
+- Decision-based routing
+
+---
+
+### MCP Tools
+
+- Get ticket
+- Update ticket
+- Search knowledge base
+- Create workflow logs
+
+---
+
+### Security
+
+- Role-based access control (RBAC)
+- Tool permissions
+
+---
+
+### Reliability
+
+- Human approval (low confidence)
+- Retry logic
+- Logging
+
+---
+
+### Observability (Basic)
+
+- Execution logs
+- Workflow tracing (simple)
+
+---
+
+## Build Order (IMPORTANT)
+
+1. Integrate ML model (classification)
+2. Integrate RAG pipeline
+3. Build basic LangGraph workflow
+4. Add tool calling logic
+5. Build MCP server
+6. Register tools
+7. Add conditional routing
+8. Add human approval step
+9. Add RBAC
+10. Add logging & audit logs
+11. Docker Compose setup
+12. Deploy (free-first approach)
+
+---
+
+## Deployment (FREE FIRST)
+
+- Backend → Render / Railway
+- Database → Free tier PostgreSQL (or local)
+- AWS EC2 → Optional (Free Tier only)
+
+---
+
+## Optional (After Completion)
 
 ### CrewAI
 
-Learn CrewAI **only after** completing this phase.
+Resource: https://docs.crewai.com/
 
-Resource
-
-https://docs.crewai.com/
-
-> This is optional and not required for your roadmap.
+👉 Learn only after completing this phase  
+👉 Not required for roadmap
 
 ---
 
 ## Deliverables
 
-Project
+Project (Implemented in separate repo)
 
 - AI Ticket Workflow Engine (Production Version)
 
-Repository
+---
+
+## Repository Structure (Project Repo)
 
 ```text
 ai-ticket-workflow-engine/
@@ -296,51 +317,3 @@ ai-ticket-workflow-engine/
 ├── docker-compose.yml
 └── README.md
 ```
-
-Artifacts
-
-- LangGraph Workflow
-- MCP Server
-- AI Agent
-- Docker Compose Setup
-- Audit Logs
-- Human Approval Workflow
-
----
-
-## Skills Gained
-
-- AI Agents
-- Tool Calling
-- Structured Outputs
-- LangGraph
-- Workflow Design
-- State Management
-- MCP
-- Human-in-the-loop
-- RBAC
-- Prompt Injection Defense
-- AI Workflow Development
-
----
-
-## Completion Criteria
-
-Move to **Phase 07** only after:
-
-- Completed the LangGraph Introduction Tutorial.
-- Completed the Hugging Face MCP Course.
-- Built an MCP Server.
-- Built a LangGraph workflow.
-- Integrated RAG into the AI Ticket Workflow Engine.
-- Implemented tool calling.
-- Added human approval.
-- Added RBAC.
-- Added audit logs.
-- Dockerized the application.
-
----
-
-## Ready for Next Phase
-
-In **Phase 07**, you'll learn real-world MLOps by versioning data, tracking experiments, automating training pipelines, monitoring models, and deploying reproducible Machine Learning systems using MLflow, DVC, Prefect, Pandera and Evidently.
