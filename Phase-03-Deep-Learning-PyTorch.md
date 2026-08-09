@@ -2,173 +2,160 @@
 
 ## Goal
 
-Understand how Neural Networks work and build your first Deep Learning application using PyTorch.
+Understand Neural Networks and build a real Deep Learning application using PyTorch.
 
-**Estimated Duration:** 6–8 Weeks
+**Estimated Duration:** 5–7 Weeks
 
 ---
 
 ## Why this Phase?
 
-Classical Machine Learning works well for structured/tabular data.
+Classical Machine Learning works well for structured data.
 
-Deep Learning is required for solving complex problems like:
+Deep Learning is used for:
 
 - Computer Vision
 - Natural Language Processing
-- Speech Recognition
-- Large Language Models (LLMs)
+- Recommendation Systems
+- Foundations of LLMs
 
-This phase builds the foundation required before learning Transformers and LLMs.
+This phase builds the base required for Transformers, LLMs and RAG.
 
 ---
 
 ## Prerequisites
 
 - Complete Phase 02
-- Good understanding of Classical Machine Learning
+- Strong understanding of ML basics
 - Comfortable with Python
 
 ---
 
-## 3.1 Deep Learning Theory
+## 3.1 Deep Learning Theory (Focused Learning)
 
 ### Resources
 
 1. Deep Learning Specialization - DeepLearning.AI (Coursera)
 
-   https://www.coursera.org/specializations/deep-learning
+https://www.coursera.org/specializations/deep-learning
 
-   Complete all five courses.
-   - Course 1 - Neural Networks and Deep Learning
-   - Course 2 - Improving Deep Neural Networks
-   - Course 3 - Structuring Machine Learning Projects
-   - Course 4 - Convolutional Neural Networks
-   - Course 5 - Sequence Models
+👉 Complete only with focus (do NOT over-invest time)
 
-> Audit the course for free. Purchase the certificate only if you want it.
+- Course 1 - Neural Networks and Deep Learning
+- Course 2 - Improving Deep Neural Networks
+- Course 4 - Convolutional Neural Networks
+- Course 5 - Sequence Models
+
+⚠️ Course 3 is optional (read summaries only)
+
+> Audit for free. Do NOT aim for perfection — aim for understanding.
 
 ---
 
-### Learn
+### Learn (What Actually Matters)
 
-#### Neural Networks
+#### Core Concepts
 
-- Perceptron
-- Artificial Neural Networks
+- What is a Neural Network
 - Forward Propagation
-- Backpropagation
-- Activation Functions
+- Backpropagation (intuition > math)
+- Activation Functions (ReLU, Sigmoid)
 
-#### Optimization
+#### Training
 
+- Loss Functions
 - Gradient Descent
 - Learning Rate
-- Batch Gradient Descent
-- Mini Batch Gradient Descent
-- Adam Optimizer
+- Overfitting vs Underfitting
 
 #### Regularization
 
 - Dropout
-- Batch Normalization
 - Early Stopping
 
-#### Convolutional Neural Networks (CNN)
+#### CNN (High Value)
 
 - Convolutions
 - Pooling
-- Image Classification
+- Image features
 
-#### Sequence Models
+#### Sequence Models (Basic Understanding)
 
-- RNN
-- LSTM
-- GRU
+- RNN (idea only)
+- LSTM (intuition only)
 
-#### Transformers (Introduction)
+#### Transformers (ONLY INTRO)
 
-- Attention Mechanism
-- Self Attention
-- Transformer Architecture (High Level)
+- Attention intuition
+- Why Transformers replaced RNNs
 
 ---
 
-## 3.2 PyTorch
+## 3.2 PyTorch (Core Only)
 
 ### Resources
 
-1. PyTorch - Learn the Basics
+1. PyTorch Official Basics
 
 https://pytorch.org/tutorials/beginner/basics/intro.html
-
-Complete all sections in order.
 
 ---
 
 ### Learn
 
-#### PyTorch Basics
+#### Essentials Only
 
-- Installation
 - Tensors
-- Tensor Operations
-- GPU Support
-
-#### Dataset Handling
-
-- Dataset
-- DataLoader
-- Train/Test Split
-
-#### Model Building
-
+- Dataset & DataLoader
 - nn.Module
-- Layers
-- Activation Functions
-
-#### Training
-
-- Forward Pass
+- Layers (Linear, Conv)
 - Loss Functions
-- Backpropagation
-- Optimizer
-- Training Loop
-- Validation Loop
+- Optimizers (Adam)
 
-#### Saving Models
+#### Training Loop (VERY IMPORTANT)
 
-- Save Model
-- Load Model
+- Forward pass
+- Loss calculation
+- Backward pass
+- Optimizer step
+
+#### Model Usage
+
+- Save model
+- Load model
 - Inference
 
 ---
 
 ## Practice
 
-Complete the examples from the PyTorch tutorials before starting your project.
+👉 Complete PyTorch tutorial examples  
+👉 Do NOT spend time building multiple mini projects
 
 ---
 
-## Flagship Project
+## Flagship Project (MANDATORY)
 
-Build one Deep Learning application.
+Build ONE complete Deep Learning system.
 
-Choose **one**:
+### Choose ONE (Recommended Order)
 
-### Option 1
-
-Sentiment Analysis API
-
-or
-
-### Option 2
-
-Image Classification API
+1. ✅ Sentiment Analysis API (RECOMMENDED)
+2. Image Classification API
 
 ---
 
-### Tech Stack
+## Project Goal
+
+Build a working system:
+
+- Train model
+- Serve predictions via API
+- Run using Docker
+
+---
+
+## Tech Stack
 
 - PyTorch
 - FastAPI
@@ -176,31 +163,39 @@ Image Classification API
 
 ---
 
-### Build Order
+## Build Order
 
 1. Dataset Preparation
 2. DataLoader
-3. Model Architecture
-4. Training
+3. Model Creation (simple NN or LSTM/CNN)
+4. Training Loop
 5. Validation
-6. Model Evaluation
+6. Evaluation
 7. Save Model
-8. Build FastAPI API
+8. Build FastAPI API (/predict)
 9. Dockerize Application
+
+---
+
+## ⚠️ Cost Policy
+
+- Train on CPU (local machine)
+- Use small datasets
+- DO NOT use paid GPU services
 
 ---
 
 ## Deliverables
 
-Project
+Project (Implemented in separate repo)
 
-- Sentiment Analysis API
-
-or
-
+- Sentiment Analysis API  
+  OR
 - Image Classification API
 
-Repository
+---
+
+## Repository (Project Repo Structure)
 
 ```text
 deep-learning-project/
@@ -214,44 +209,3 @@ deep-learning-project/
 ├── requirements.txt
 └── README.md
 ```
-
-Artifacts
-
-- Trained PyTorch Model
-- Saved Model Weights
-- FastAPI API
-- Dockerized Application
-
----
-
-## Skills Gained
-
-- Neural Networks
-- Backpropagation
-- Optimization Techniques
-- CNNs
-- Sequence Models
-- Attention Basics
-- PyTorch
-- DataLoaders
-- Training Loops
-- Model Deployment using FastAPI
-
----
-
-## Completion Criteria
-
-Move to **Phase 04** only after:
-
-- Completed the Deep Learning Specialization.
-- Completed the PyTorch Basics Tutorial.
-- Built and trained one Deep Learning model.
-- Saved the trained model.
-- Built a FastAPI API for inference.
-- Dockerized the application.
-
----
-
-## Ready for Next Phase
-
-In **Phase 04**, you'll learn how Large Language Models work, understand Transformers in depth, work with Hugging Face, run local models using Ollama, and build structured AI applications before moving to RAG and AI Agents.
