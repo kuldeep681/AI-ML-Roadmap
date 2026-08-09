@@ -1,16 +1,23 @@
-# Phase 01 - Machine Learning Foundations + XGBoost
+# Phase 01 - Machine Learning Foundations + XGBoost (SYSTEM-DRIVEN)
 
 ## Goal
 
-Build a strong foundation in Classical Machine Learning and train your first production-ready Machine Learning model.
+Build a strong foundation in Classical Machine Learning and develop your **first end-to-end Machine Learning system** (not just a model).
 
-**Estimated Duration:** 8–10 Weeks
+**Estimated Duration:** 6–8 Weeks
 
 ---
 
 ## Why this Phase?
 
-Before learning Deep Learning, LLMs or RAG, you need to understand how Machine Learning models work, how to evaluate them, and how to build reliable prediction systems.
+Before Deep Learning, LLMs, or RAG, you must understand:
+
+- How models learn
+- How to evaluate models
+- How to build reliable prediction systems
+
+> Most importantly:
+> **How to turn a model into something usable (system thinking)**
 
 ---
 
@@ -22,7 +29,7 @@ Before learning Deep Learning, LLMs or RAG, you need to understand how Machine L
 
 ---
 
-## 1.1 Machine Learning Theory
+## 1.1 Machine Learning Theory (FOCUSED)
 
 ### Resources
 
@@ -30,12 +37,9 @@ Before learning Deep Learning, LLMs or RAG, you need to understand how Machine L
 
    https://www.coursera.org/specializations/machine-learning-introduction
 
-   Complete all three courses.
-   - Course 1 - Supervised Machine Learning
-   - Course 2 - Advanced Learning Algorithms
-   - Course 3 - Unsupervised Learning, Recommenders & Reinforcement Learning
+> Focus on intuition and application. Avoid going too deep into math.
 
-> Audit the course for free. Purchase the certificate only if needed.
+---
 
 ### Learn
 
@@ -43,28 +47,24 @@ Before learning Deep Learning, LLMs or RAG, you need to understand how Machine L
 
 - Linear Regression
 - Logistic Regression
-- Cost Function
-- Gradient Descent
 
 #### Model Improvement
 
-- Regularization
+- Overfitting vs Underfitting
 - Bias vs Variance
-- Overfitting
-- Underfitting
+- Regularization
 
-#### Tree Based Models
+#### Tree-Based Models
 
 - Decision Trees
 - Random Forests
 
-#### Unsupervised Learning
+#### Boosting (IMPORTANT)
 
-- Clustering
+- Gradient Boosting intuition
 
-#### Model Evaluation
+#### Evaluation (CRITICAL)
 
-- Train / Validation / Test Split
 - Accuracy
 - Precision
 - Recall
@@ -73,27 +73,16 @@ Before learning Deep Learning, LLMs or RAG, you need to understand how Machine L
 
 ---
 
-## 1.2 Practical Machine Learning + XGBoost
+## 1.2 Practical Machine Learning + XGBoost (CORE)
 
 ### Resources
 
-Complete these in order.
-
 1. Kaggle - Intro to Machine Learning
-
-   https://www.kaggle.com/learn/intro-to-machine-learning
-
 2. Kaggle - Intermediate Machine Learning
-
-   https://www.kaggle.com/learn/intermediate-machine-learning
-
 3. Kaggle - Feature Engineering
-
-   https://www.kaggle.com/learn/feature-engineering
-
 4. Kaggle - Machine Learning Explainability
 
-   https://www.kaggle.com/learn/machine-learning-explainability
+> Do not just complete — apply concepts directly in your project.
 
 ---
 
@@ -102,7 +91,7 @@ Complete these in order.
 #### Data Preparation
 
 - Handling Missing Values
-- Categorical Variables
+- Encoding Categorical Variables
 - Feature Engineering
 - Pipelines
 
@@ -112,26 +101,20 @@ Complete these in order.
 - Cross Validation
 - RandomizedSearchCV
 
-#### XGBoost
+#### XGBoost (MAIN MODEL)
 
 - XGBClassifier
-- XGBRegressor
-- Gradient Boosting Intuition
-- n_estimators
-- learning_rate
-- max_depth
-- subsample
-- colsample_bytree
-- scale_pos_weight
+- Key Parameters:
+  - n_estimators
+  - learning_rate
+  - max_depth
+  - subsample
+  - colsample_bytree
+  - scale_pos_weight
 
-#### Evaluation
+---
 
-- Precision
-- Recall
-- F1 Score
-- ROC-AUC
-
-#### Explainability
+### Explainability
 
 - SHAP Feature Importance
 - Global Explanation
@@ -139,59 +122,95 @@ Complete these in order.
 
 ---
 
-## Mini Practice
+## Mini Practice (MODIFIED)
 
-Before starting the flagship project, practice using the concepts learned from Kaggle courses by experimenting with the datasets provided in those courses.
+Use Kaggle exercises only to understand concepts.
 
-> No separate mini projects are required in this phase. Focus on completing the Kaggle exercises and notebooks.
+> Immediately apply everything in your main project.  
+> Do NOT create separate mini projects.
 
 ---
 
 ## Flagship Project
 
-### Production Customer Churn Prediction System
+# 🔥 Customer Churn Prediction SYSTEM
 
-### Tech Stack
+---
 
-- Pandas
-- NumPy
-- Scikit-learn
-- XGBoost
-- SHAP
+## Objective
 
-> FastAPI, PostgreSQL, Docker, AWS, MLflow and DVC will be integrated in later phases.
+Build a system that:
 
-### Build Order
+- Takes customer data
+- Predicts churn
+- Explains predictions
+
+---
+
+## Build Order
+
+### Phase A: Data Preparation
 
 1. Exploratory Data Analysis (EDA)
 2. Data Cleaning
 3. Feature Engineering
-4. Logistic Regression Baseline
-5. Random Forest Baseline
-6. XGBoost Final Model
+
+---
+
+### Phase B: Modeling
+
+4. Logistic Regression (Baseline)
+5. Random Forest (Baseline)
+6. XGBoost (Final Model)
+
+---
+
+### Phase C: Evaluation
+
 7. Cross Validation
 8. Hyperparameter Tuning
-9. SHAP Explainability
-10. Save Model using joblib
 
-> API Development, Dockerization and Deployment will be completed in Phase 02.
+---
+
+### Phase D: Explainability
+
+9. SHAP Explainability (MANDATORY)
+
+---
+
+### Phase E: System Preparation (IMPORTANT)
+
+10. Create prediction pipeline:
+
+```python
+def predict_customer(data):
+    # preprocess input
+    # load trained model
+    # return prediction
+```
+
+> This function will be used in Phase 02 for API development.
 
 ---
 
 ## Deliverables
 
-Project
+### Project
 
-- Production Customer Churn Prediction System (Model Training Completed)
+- Customer Churn Prediction System
 
-Artifacts
+---
+
+### Artifacts
 
 - Trained XGBoost Model
 - SHAP Visualizations
-- Model Metrics
+- Evaluation Metrics
 - joblib Model File
 
-Repository
+---
+
+### Repository Structure
 
 ```text
 customer-churn-prediction/
@@ -200,6 +219,10 @@ customer-churn-prediction/
 ├── notebooks/
 ├── models/
 ├── src/
+│   ├── train.py
+│   ├── predict.py        # REQUIRED
+│   └── preprocess.py
+│
 ├── requirements.txt
 └── README.md
 ```
@@ -210,15 +233,13 @@ customer-churn-prediction/
 
 - Classical Machine Learning
 - Supervised Learning
-- Decision Trees
-- Random Forests
-- XGBoost
-- Hyperparameter Tuning
-- Cross Validation
+- Tree-Based Models
+- XGBoost (Industry Level)
 - Feature Engineering
 - Model Evaluation
 - SHAP Explainability
 - Model Persistence using joblib
+- Basic ML System Design
 
 ---
 
@@ -226,16 +247,22 @@ customer-churn-prediction/
 
 Move to **Phase 02** only after:
 
-- Completed the Machine Learning Specialization.
-- Completed all four Kaggle courses.
-- Trained an XGBoost model.
-- Performed Hyperparameter Tuning.
-- Generated SHAP explanations.
-- Saved the model using joblib.
-- Completed the Customer Churn Prediction model training.
+- Completed ML Specialization (focused understanding)
+- Completed Kaggle courses (with application)
+- Trained XGBoost model
+- Performed Hyperparameter Tuning
+- Generated SHAP explanations
+- Saved model using joblib
+- Created `predict.py` pipeline
 
 ---
 
 ## Ready for Next Phase
 
-In Phase 02, you'll convert your trained Machine Learning model into a production-ready application using FastAPI, Docker, PostgreSQL, GitHub Actions and AWS.
+In Phase 02, you will:
+
+- Convert this model into an API (FastAPI)
+- Containerize using Docker
+- Deploy using AWS EC2 or Render
+
+> Since your prediction pipeline is ready, Phase 02 will be smooth and practical.
