@@ -2,25 +2,26 @@
 
 ## Goal
 
-Understand how Large Language Models (LLMs) work and build AI applications using modern LLM APIs before learning RAG, AI Agents and LangGraph.
+Understand how Large Language Models (LLMs) work and build real-world AI applications using APIs and local models.
 
-**Estimated Duration:** 4–6 Weeks
+**Estimated Duration:** 4–5 Weeks
 
 ---
 
 ## Why this Phase?
 
-Before building AI Agents or RAG systems, you need to understand how LLMs work.
+This is where you transition from:
 
-This phase focuses on using LLMs effectively rather than training them.
+👉 ML Engineer → AI Engineer
 
 You will learn:
 
-- How LLMs generate text
-- How to communicate with LLMs
-- How to structure AI outputs
-- How to run local models
-- How to build reliable AI applications
+- How LLMs actually work (practical understanding)
+- How to control LLM outputs
+- How to build reliable AI systems
+- How to use APIs and local models
+
+This phase is REQUIRED before RAG and AI Agents.
 
 ---
 
@@ -32,64 +33,71 @@ You will learn:
 
 ---
 
-## 4.1 LLM Fundamentals
+## 4.1 LLM Fundamentals (Focused)
 
 ### Resources
 
 1. Hugging Face LLM Course
 
-   https://huggingface.co/learn/llm-course
+https://huggingface.co/learn/llm-course
 
-Complete these chapters:
+👉 Complete ONLY these:
 
 - Chapter 1 - Transformers
 - Chapter 2 - Using Transformers
-- Chapter 3 - Fine-tuning Basics (Concept Only)
+- Chapter 3 - Fine-tuning (Concept Only)
 - Chapter 5 - Tokenizers
-- Chapter 8 - Sharing Models
 
-> Skip chapters that focus heavily on training large models. We'll revisit fine-tuning in Phase 09.
+⚠️ Skip heavy training sections
 
 ---
 
-### Learn
+2. Generative AI with Large Language Models - DeepLearning.AI
 
-#### LLM Basics
+https://www.deeplearning.ai/courses/generative-ai-with-llms/
 
-- What is an LLM?
-- Tokens
-- Tokenization
+👉 Optional but Recommended
+
+Focus only on:
+
+- LLM lifecycle
+- Pretraining vs Fine-tuning
+- Inference concepts
+- Evaluation basics
+
+⚠️ Do NOT go deep — use for intuition only
+
+---
+
+### Learn (What Actually Matters)
+
+#### Core Concepts
+
+- What is an LLM
+- Tokens & Tokenization
 - Context Window
-- Embeddings (Concept)
-- Temperature
-- Top-k
-- Top-p
-- Max Tokens
-- Stop Sequences
+- Temperature, Top-k, Top-p
+- Max Tokens & Stop Sequences
 
-#### Transformers
+#### Transformers (Practical Understanding)
 
 - Encoder vs Decoder
-- Self Attention (Concept)
-- Attention Mechanism
-- Positional Encoding (Concept)
+- Attention (intuition only)
+- Why Transformers replaced RNNs
 
-#### Prompt Engineering
+#### Prompt Engineering (VERY IMPORTANT)
 
-- Zero-shot Prompting
-- One-shot Prompting
-- Few-shot Prompting
-- Role Prompting
-- Chain of Thought (Concept)
+- Zero-shot
+- Few-shot
+- Role-based prompting
 - Prompt Templates
+- Output structuring
 
 ---
 
-## 4.2 Ollama
+## 4.2 Local LLMs (Ollama)
 
 ### Resource
-
-1. Ollama Documentation
 
 https://docs.ollama.com/
 
@@ -98,12 +106,15 @@ https://docs.ollama.com/
 ### Learn
 
 - Install Ollama
-- Download Models
-- Run Local Models
-- Model Management
-- Basic API Usage
+- Run local models
+- Model management
+- Basic API usage
 
-Practice using models like:
+---
+
+### Practice
+
+Use models like:
 
 - Llama
 - Gemma
@@ -111,105 +122,108 @@ Practice using models like:
 
 ---
 
-## 4.3 LLM APIs
-
-### Resource
-
-1. Generative AI with Large Language Models
-
-https://www.deeplearning.ai/courses/generative-ai-with-llms/
-
-> Optional
-
-Take this course only if it's affordable or available through financial aid.
-
----
+## 4.3 LLM APIs (Core Engineering)
 
 ### Learn
 
-Using LLM APIs
+#### API Usage
 
-- System Prompts
-- User Prompts
-- Assistant Messages
-- Chat Completion APIs
+- Chat-based APIs
+- System / User / Assistant roles
+- Prompt structuring
 
-Structured Outputs
+#### Structured Outputs (VERY IMPORTANT)
 
-- JSON Responses
-- Pydantic Validation
-- Output Parsing
-- Response Validation
+- JSON outputs
+- Pydantic validation
+- Output parsing
+- Response formatting
 
-Reliability
+#### Reliability Engineering
 
-- Retry Logic
-- Error Handling
-- Rate Limits
-- Cost Optimization
-- Token Usage
+- Retry logic
+- Handling invalid outputs
+- Rate limits
+- Token usage awareness
 
 ---
 
-## Practice
+## ⚠️ Cost Policy
 
-Build small programs using an LLM API.
+- Prefer local models (Ollama)
+- Use free API credits only
+- Keep requests minimal
+- Avoid unnecessary API calls
 
-Examples
+---
+
+## Practice (Mini Apps)
+
+Build small tools:
 
 - Text Summarizer
 - Email Generator
 - Resume Improver
-- Blog Title Generator
+- Blog Generator
 
-Focus on learning prompts and structured outputs.
+👉 Focus on:
+
+- Prompt quality
+- Output structure
+- Reliability
 
 ---
 
-## Flagship Project
+## Flagship Project (MANDATORY)
 
 ### Structured AI Assistant
 
-### Tech Stack
+---
+
+## Project Goal
+
+Build a production-style AI system that:
+
+- Accepts user input
+- Generates structured JSON output
+- Validates output
+- Handles failures
+- Returns reliable responses
+
+---
+
+## Tech Stack
 
 - FastAPI
 - Pydantic
-- Ollama
-- OpenAI or Gemini API
+- Ollama (Primary)
+- OpenAI or Gemini (Optional)
 
 ---
 
-### Features
-
-- Accept user input
-- Generate structured JSON
-- Validate output using Pydantic
-- Handle invalid responses
-- Retry on parsing failures
-- Return consistent API responses
-
----
-
-### Build Order
+## Build Order
 
 1. Setup FastAPI
-2. Connect LLM
-3. Design Prompts
-4. Generate Structured JSON
+2. Connect LLM (start with Ollama)
+3. Design prompt templates
+4. Generate structured JSON
 5. Validate using Pydantic
-6. Handle Errors
-7. Retry Failed Responses
-8. Dockerize Application
+6. Handle invalid outputs
+7. Implement retry logic
+8. Add logging
+9. Dockerize application
 
 ---
 
 ## Deliverables
 
-Project
+Project (Implemented in separate repo)
 
 - Structured AI Assistant
 
-Repository
+---
+
+## Repository Structure (Project Repo)
 
 ```text
 structured-ai-assistant/
@@ -223,45 +237,3 @@ structured-ai-assistant/
 ├── requirements.txt
 └── README.md
 ```
-
-Artifacts
-
-- FastAPI API
-- Prompt Templates
-- Pydantic Schemas
-- Dockerized Application
-
----
-
-## Skills Gained
-
-- LLM Fundamentals
-- Transformers Basics
-- Prompt Engineering
-- Ollama
-- Local LLMs
-- LLM APIs
-- Structured Outputs
-- Pydantic Validation
-- Retry Strategies
-- Cost Optimization
-
----
-
-## Completion Criteria
-
-Move to **Phase 05** only after:
-
-- Completed the Hugging Face LLM Course.
-- Used Ollama to run local models.
-- Built applications using an LLM API.
-- Generated structured JSON responses.
-- Validated responses using Pydantic.
-- Built the Structured AI Assistant.
-- Dockerized the application.
-
----
-
-## Ready for Next Phase
-
-In **Phase 05**, you'll learn Retrieval-Augmented Generation (RAG), Vector Databases, document ingestion, retrieval pipelines, evaluation using Ragas, observability with Phoenix, and build a production-ready Knowledge Assistant.
