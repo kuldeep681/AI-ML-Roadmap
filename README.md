@@ -148,6 +148,7 @@ Projects are built progressively across phases (NOT in one go).
 
 ## 📂 Repository Structure
 
+```text
 AI-ML-Roadmap/
 │
 ├── README.md
@@ -210,6 +211,7 @@ AI-ML-Roadmap/
 ├── Phase-07/
 ├── Phase-08/
 └── Phase-09/
+```
 
 ---
 
