@@ -1,99 +1,113 @@
-# Project 01 - Customer Churn Prediction (Core ML)
-
-## Phase Mapping
-
-- Phase 01 ONLY
-- This is the BASE PROJECT
-- Will be reused in Phase 07 (MLOps) and Phase 08 (Kubernetes)
+# 🚀 Project 01 - Customer Churn Prediction (Phase 01 - Core ML System)
 
 ---
 
-## Goal
+## 🎯 Objective
 
-Build a Machine Learning model to predict customer churn.
-
----
-
-## Problem Statement
-
-Predict whether a customer will leave based on given features.
+Build a production-ready Machine Learning pipeline for customer churn prediction.
 
 ---
 
-## Tech Stack
+## ⚠️ Core Requirements
 
-- Python
-- Pandas
-- NumPy
-- Scikit-learn / XGBoost
-- Matplotlib / Seaborn
-
----
-
-## What You Are Building NOW
-
-### Core ML System
-
-- Data preprocessing
-- Feature engineering
-- Model training
-- Model evaluation
-- Model saving
+- Modular code
+- No hardcoded paths
+- Reusable in later phases
+- Clean separation of concerns
 
 ---
 
-## Build Steps
+## 🧠 System Architecture
 
-1. Load dataset
-2. Clean data
-3. Perform EDA
-4. Feature engineering
-5. Train model (XGBoost preferred)
-6. Evaluate model
-7. Save model (joblib/pickle)
+Data → Preprocessing → Feature Engineering → Training → Evaluation → Model Saving
 
 ---
 
-## Output
+## 📁 Project Structure
 
-- Trained ML model
-- Evaluation metrics
+project/
+│
+├── data/
+│   ├── raw/
+│   └── processed/
+│
+├── notebooks/
+│   └── eda.ipynb
+│
+├── src/
+│   ├── config/
+│   │   └── config_loader.py
+│   │
+│   ├── data/
+│   │   ├── load_data.py
+│   │   └── preprocess.py
+│   │
+│   ├── features/
+│   │   └── build_features.py
+│   │
+│   ├── models/
+│   │   ├── train_model.py
+│   │   └── save_model.py
+│   │
+│   ├── evaluation/
+│   │   └── evaluate.py
+│   │
+│   └── utils/
+│       └── logger.py
+│
+├── models/
+│   └── churn_model.pkl
+│
+├── config.yaml
+├── requirements.txt
+└── run.py
 
 ---
 
-## IMPORTANT (Future Use)
+## ⚙️ Configuration
 
-⚠️ This project will be EXTENDED later:
-
-### Phase 07 (MLOps)
-
-You will ADD:
-
-- Data validation (Pandera)
-- Data versioning (DVC)
-- Experiment tracking (MLflow)
-- Training pipeline (Prefect)
+Use config.yaml for:
+- dataset path
+- model parameters
+- output paths
 
 ---
 
-### Phase 08 (Kubernetes)
+## 🧩 Build Steps
 
-You will ADD:
-
-- Docker
-- Kubernetes deployment
-- Scaling
-
----
-
-## Constraints
-
-- Keep code clean
-- Separate training logic
-- Save model properly
+1. Load dataset  
+2. Clean data  
+3. Perform EDA  
+4. Feature engineering  
+5. Train model (XGBoost preferred)  
+6. Evaluate model  
+7. Save model using joblib  
 
 ---
 
-## Final Outcome
+## 📦 Output
 
-A working ML model ready for production upgrade
+- churn_model.pkl  
+- evaluation metrics  
+
+---
+
+## 🚫 Constraints
+
+- No API  
+- No Docker  
+- No deployment  
+
+---
+
+## 🔮 Future Compatibility
+
+Will be extended with:
+- MLOps (Phase 07)
+- Kubernetes (Phase 08)
+
+---
+
+## 🎯 Final Outcome
+
+A clean ML system ready for production upgrades
