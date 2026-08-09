@@ -1,105 +1,137 @@
-# Project 07 - AI Ticket Workflow Engine (Fine-Tuning Upgrade)
-
-## Phase Mapping
-
-- Phase 09
-- Extends: Project 06 (AI Agent System)
+# 🚀 Project 07 - AI Ticket Workflow Engine (Phase 09 - Fine-Tuning Upgrade)
 
 ---
 
-## Goal
+## 🎯 Objective
 
-Improve the AI Ticket Workflow Engine by applying fine-tuning (LoRA / QLoRA) and comparing it with other approaches like RAG and prompting.
-
----
-
-## Why Fine-Tuning Here?
-
-This is NOT a separate project.
-
-Fine-tuning is applied to improve the **existing AI system** built in Phase 06.
-
-👉 This ensures:
-
-- Better classification accuracy
-- Better workflow decisions
-- Real-world system improvement
+Improve the AI agent system by applying fine-tuning and comparing it with other approaches.
 
 ---
 
-## What You Already Have
+## ⚠️ Core Principle
 
-From Phase 06:
+This is NOT a standalone project.
 
-- AI agent system
-- Ticket workflow automation
-- Tool-based execution (LangGraph + MCP)
-- Basic classification logic (rule-based or ML)
+It upgrades:
 
----
-
-## What You Will Build NOW
-
-### Model Improvement Layer
-
-- Fine-tuned classification model
-- Comparative evaluation system
+- Classification layer
+- Decision-making quality
 
 ---
 
-## Tech Stack
+## 🧠 System Architecture
 
-- Hugging Face Transformers
-- PEFT (LoRA / QLoRA)
-- PyTorch
-- Kaggle / Colab (FREE GPU)
+User Input → Agent → Classification Layer → Tool Selection → MCP → Response
 
 ---
 
-## Features
-
-### Fine-Tuning
-
-- Train model using LoRA
-- Train model using QLoRA
-- Use lightweight models (important)
-
----
-
-### Evaluation (MOST IMPORTANT)
-
-Compare multiple approaches:
-
-- Existing baseline (rule-based / ML)
-- Fine-tuned model (LoRA)
-- Fine-tuned model (QLoRA)
-- RAG-based approach
-- Prompting approach
-
----
-
-### Integration
-
-- Replace classification logic in agent system
-- Improve decision accuracy
-- Plug improved model into workflow
-
----
-
-## Architecture (Updated)
+## 📁 Project Structure
 
 ```text
-User Input
-   ↓
-Agent (LangGraph)
-   ↓
-Classification Layer (Improved Model)
-   ↓
-Tool Selection
-   ↓
-MCP Tools
-   ↓
-Database / APIs
-   ↓
-Response
+project/
+│
+├── src/
+│   ├── training/
+│   │   └── finetune.py
+│   │
+│   ├── inference/
+│   │   └── predictor.py
+│   │
+│   └── evaluation/
+│       └── compare.py
+│
+├── data/
+│   └── tickets_dataset.json
+│
+├── models/
+│   └── finetuned_model
+│
+├── notebooks/
+│   └── experiments.ipynb
+│
+└── requirements.txt
 ```
+
+---
+
+## 🧩 Dataset Format
+
+JSON format:
+
+[
+{
+"text": "User cannot login",
+"label": "authentication_issue"
+}
+]
+
+---
+
+## 🧩 Training Setup
+
+- Use Hugging Face Transformers
+- Use PEFT (LoRA / QLoRA)
+- Use lightweight models:
+  - distilbert
+  - tinyllama
+
+---
+
+## 🧩 Training Steps
+
+1. Load dataset
+2. Tokenize data
+3. Apply LoRA / QLoRA
+4. Train model
+5. Save model
+
+---
+
+## 🧩 Evaluation (CRITICAL)
+
+Compare:
+
+- Baseline model
+- LoRA model
+- QLoRA model
+- RAG approach
+- Prompt-based approach
+
+Metrics:
+
+- Accuracy
+- F1 Score
+- Latency
+
+---
+
+## 🧩 Integration
+
+- Replace classifier in agent system
+- Use finetuned model for inference
+
+---
+
+## 🧩 Inference Flow
+
+Input → Model → Prediction → Agent Decision
+
+---
+
+## 📦 Output
+
+- Improved classification model
+- Performance comparison report
+
+---
+
+## 🚫 Constraints
+
+- Use free GPU (Kaggle/Colab)
+- Keep models lightweight
+
+---
+
+## 🎯 Final Outcome
+
+A significantly improved AI system with better decision accuracy

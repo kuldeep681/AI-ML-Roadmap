@@ -1,109 +1,163 @@
-# Project 04 - RAG Knowledge Assistant (Foundations)
-
-## Phase Mapping
-
-- Phase 04 ONLY
-- This is the BASE for RAG system
-- Will be extended in Phase 05
+# 🚀 Project 04 - RAG Knowledge Assistant (Phase 04 - Foundations)
 
 ---
 
-## Goal
+## 🎯 Objective
 
-Understand and implement the core building blocks required for a RAG system.
+Build the core retrieval system required for a Retrieval-Augmented Generation (RAG) pipeline.
 
----
+This phase focuses ONLY on:
 
-## What You Are Building NOW
-
-### Core Components
-
-- Text preprocessing
-- Chunking strategy
-- Embedding generation
+- Document processing
+- Chunking
+- Embedding
 - Vector storage
+- Retrieval
+
+No LLM is used in this phase.
 
 ---
 
-## Tech Stack
+## ⚠️ Core Requirements
 
-- Python
-- Sentence Transformers / OpenAI Embeddings
-- FAISS (preferred for simplicity)
-
----
-
-## Concepts to Implement
-
-### 1. Text Processing
-
-- Load documents (PDF / text)
-- Clean text
-- Split into chunks
+- Modular design
+- No hardcoded paths
+- Reusable for next phase
+- Efficient vector search
 
 ---
 
-### 2. Chunking
+## 🧠 System Architecture
 
-- Fixed size chunks
-- Overlap strategy
-
----
-
-### 3. Embeddings
-
-- Convert text → vectors
-- Use embedding model
+Documents → Preprocessing → Chunking → Embedding → Vector Store (FAISS) → Retrieval
 
 ---
 
-### 4. Vector Storage
+## 📁 Project Structure
 
-- Store embeddings in FAISS
-- Basic similarity search
-
----
-
-## Build Steps
-
-1. Load sample documents
-2. Clean and preprocess text
-3. Split into chunks
-4. Generate embeddings
-5. Store in FAISS
-6. Perform similarity search
-
----
-
-## Output
-
-- Working vector database
-- Ability to retrieve relevant chunks
-
----
-
-## IMPORTANT (Next Phase)
-
-⚠️ This project will be EXTENDED in Phase 05
-
-You will ADD:
-
-- LLM integration
-- Query → response pipeline
-- FastAPI
-- Evaluation (Ragas)
-- Docker deployment
+```text
+project/
+│
+├── data/
+│ └── documents/
+│
+├── src/
+│ ├── data/
+│ │ └── loader.py
+│ │
+│ ├── processing/
+│ │ └── text_cleaner.py
+│ │
+│ ├── chunking/
+│ │ └── chunker.py
+│ │
+│ ├── embeddings/
+│ │ └── embedder.py
+│ │
+│ ├── vectorstore/
+│ │ └── faiss_store.py
+│ │
+│ └── retrieval/
+│ └── retriever.py
+│
+├── vector_db/
+│ └── faiss_index
+│
+├── config.yaml
+└── run.py
+```
 
 ---
 
-## Constraints
+## ⚙️ Configuration
 
-- Keep it simple
-- Use local embeddings if possible
-- No heavy APIs required
+config.yaml should define:
+
+- chunk_size: 500
+- chunk_overlap: 50
+- embedding_model: all-MiniLM-L6-v2
+- top_k: 5
 
 ---
 
-## Final Outcome
+## 🧩 Implementation Steps
 
-A working retrieval system (without LLM yet)
+### Step 1 — Load Documents
+
+- Support PDF and text files
+- Extract raw text
+
+---
+
+### Step 2 — Text Preprocessing
+
+- Remove noise
+- Normalize whitespace
+- Clean unwanted characters
+
+---
+
+### Step 3 — Chunking
+
+- Fixed-size chunking
+- Use overlap to preserve context
+
+Example:
+
+- chunk_size = 500
+- overlap = 50
+
+---
+
+### Step 4 — Embedding Generation
+
+- Use SentenceTransformers
+- Convert each chunk → vector
+
+---
+
+### Step 5 — Vector Storage (FAISS)
+
+- Create FAISS index
+- Store embeddings
+- Save index locally
+
+---
+
+### Step 6 — Retrieval
+
+- Convert query → embedding
+- Perform similarity search
+- Return top_k chunks
+
+---
+
+## 📦 Output
+
+- FAISS index stored locally
+- Retrieval function working
+
+---
+
+## 🚫 Constraints
+
+- No LLM usage
+- No API
+- Keep system lightweight
+
+---
+
+## 🔮 Future Compatibility
+
+Will be extended with:
+
+- LLM (Phase 05)
+- API
+- Evaluation
+- Docker
+
+---
+
+## 🎯 Final Outcome
+
+A working semantic search system capable of retrieving relevant document chunks
