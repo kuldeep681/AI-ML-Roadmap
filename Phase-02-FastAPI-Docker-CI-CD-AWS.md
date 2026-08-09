@@ -2,25 +2,25 @@
 
 ## Goal
 
-Deploy your Machine Learning model as a production-ready cloud application using FastAPI, Docker, GitHub Actions and AWS.
+Convert your Machine Learning model into a **production-ready application** and deploy it to the cloud.
 
-**Estimated Duration:** 6–8 Weeks
+**Estimated Duration:** 5–7 Weeks
 
 ---
 
 ## Why this Phase?
 
-Training a Machine Learning model is only part of the job.
+Training a model is only the first step.
 
-A Machine Learning Engineer should also know how to:
+A Machine Learning Engineer must also know how to:
 
 - Build APIs
 - Containerize applications
 - Automate testing
-- Deploy applications to the cloud
-- Monitor deployed services
+- Deploy to cloud
+- Run and manage real systems
 
-This phase transforms your Customer Churn Model into a real-world application.
+> This phase transforms your ML model into a real-world application.
 
 ---
 
@@ -29,33 +29,19 @@ This phase transforms your Customer Churn Model into a real-world application.
 - Complete Phase 01
 - Customer Churn Model trained
 - Model saved using joblib
+- Basic understanding of prediction workflow
 
 ---
 
-## 2.1 FastAPI
+## 2.1 FastAPI (API Development)
 
 ### Resources
 
-1. FastAPI Official Tutorial
-
+1. FastAPI Official Tutorial  
    https://fastapi.tiangolo.com/tutorial/
 
-   Complete from:
-   - First Steps
-   - Path Parameters
-   - Query Parameters
-   - Request Body
-   - Response Models
-   - Dependencies
-   - Security
-
-2. FastAPI SQL Databases
-
+2. FastAPI SQL Databases  
    https://fastapi.tiangolo.com/tutorial/sql-databases/
-
-3. FastAPI Docker Deployment
-
-   https://fastapi.tiangolo.com/deployment/docker/
 
 ---
 
@@ -72,8 +58,7 @@ This phase transforms your Customer Churn Model into a real-world application.
 #### Validation
 
 - Pydantic Models
-- Request Validation
-- Response Validation
+- Request & Response Validation
 
 #### Dependency Injection
 
@@ -86,19 +71,25 @@ This phase transforms your Customer Churn Model into a real-world application.
 - Database Sessions
 - CRUD Operations
 
-#### Authentication
-
-- JWT Basics
-
 #### Error Handling
 
 - HTTPException
-- Custom Exception Handlers
+- Custom Errors
 
 #### Documentation
 
 - Swagger UI
-- OpenAPI Docs
+- OpenAPI
+
+---
+
+### Objective
+
+Convert your ML model into an API that:
+
+- Accepts input data
+- Returns prediction
+- Returns model explanation
 
 ---
 
@@ -106,19 +97,17 @@ This phase transforms your Customer Churn Model into a real-world application.
 
 ### Resources
 
-1. Docker Get Started
-
+1. Docker Get Started  
    https://docs.docker.com/get-started/
 
-2. Docker Compose Getting Started
-
+2. Docker Compose  
    https://docs.docker.com/compose/gettingstarted/
 
 ---
 
 ### Learn
 
-Docker
+#### Docker
 
 - Images
 - Containers
@@ -126,80 +115,70 @@ Docker
 - Volumes
 - Networks
 
-Docker Compose
+#### Docker Compose
 
-- docker-compose.yml
-- Multiple Services
-- Environment Variables
+- Multi-service setup
+- Environment variables
+- Service communication
 
 ---
 
-### Build
+### Objective
 
-Your application should run using
+Run your full application using:
 
 ```bash
 docker compose up --build
 ```
 
-Architecture
+Architecture:
 
-```text
-FastAPI
-    │
-    ▼
-PostgreSQL
+```
+FastAPI → PostgreSQL
 ```
 
 ---
 
-## 2.3 GitHub Actions
+## 2.3 GitHub Actions (CI)
 
 ### Resources
 
-1. GitHub Actions Quickstart
-
-https://docs.github.com/en/actions/writing-workflows/quickstart
-
-2. GitHub Actions for Python
-
-https://docs.github.com/en/actions/use-cases-and-examples/building-and-testing/building-and-testing-python
+1. GitHub Actions Quickstart  
+   https://docs.github.com/en/actions/writing-workflows/quickstart
 
 ---
 
 ### Learn
 
-- GitHub Workflows
-- Python CI
-- Running pytest
-- Building Docker Images
+- Workflows
+- Running tests automatically
+- Building Docker images
 
 ---
 
-### Build
+### Objective
 
-Create one workflow that automatically:
+Create a workflow that:
 
 - Installs dependencies
-- Runs pytest
-- Builds Docker Image
+- Runs tests
+- Builds Docker image
 
-Trigger
+Trigger:
 
-- Every Push
-- Every Pull Request
+- Push
+- Pull Request
 
 ---
 
-## 2.4 AWS Fundamentals
+## 2.4 AWS Fundamentals (FOCUSED)
 
 ### Resources
 
-1. AWS Cloud Practitioner Essentials
+AWS Skill Builder  
+https://explore.skillbuilder.aws/
 
-https://explore.skillbuilder.aws/learn/course/134/aws-cloud-practitioner-essentials
-
-Complete only:
+Focus only on:
 
 - IAM
 - EC2
@@ -207,126 +186,121 @@ Complete only:
 - VPC Basics
 - Security Groups
 - CloudWatch
-- Billing & Pricing
-
----
-
-### AWS Account Setup
-
-Before creating any AWS resources:
-
-- Enable Root MFA
-- Create IAM Admin User
-- Create Billing Alert
-- Create Budget Alert
-
-> Never use the Root Account for daily work.
-
----
-
-## 2.5 AWS EC2 Deployment
-
-### Resources
-
-1. EC2 Getting Started
-
-https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EC2_GetStarted.html
-
-2. EC2 Security Groups
-
-https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-security-groups.html
-
-3. Connect to EC2 using SSH
-
-https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/connect-to-linux-instance.html
-
-4. Nginx Reverse Proxy
-
-https://docs.nginx.com/nginx/admin-guide/web-server/reverse-proxy/
-
-5. Amazon S3 Getting Started
-
-https://docs.aws.amazon.com/AmazonS3/latest/userguide/GetStartedWithS3.html
+- Billing
 
 ---
 
 ### Learn
 
-EC2
-
-- Launch Instance
-- Security Groups
-- Key Pair
-- Elastic IP (Basics)
-
-Nginx
-
-- Reverse Proxy
-- Port Forwarding
-
-S3
-
-- Upload Files
-- Private Buckets
-
-CloudWatch
-
-- Logs
-- Monitoring Basics
+- What is EC2
+- How servers work
+- Basic networking
+- Cost awareness (IMPORTANT)
 
 ---
 
-### Deployment Steps
+### Setup
 
-1. Launch Ubuntu EC2 Instance
-2. Allow SSH only from your IP
-3. Allow HTTP (Port 80)
-4. Install Docker
-5. Install Docker Compose
-6. Clone Repository
-7. Configure .env
-8. Run Docker Compose
-9. Install Nginx
-10. Configure Reverse Proxy
-11. Upload Model Backup to S3
-12. Verify Application
-13. Monitor Logs using CloudWatch
+- Enable MFA
+- Create IAM user
+- Set billing alerts
+
+> Never use root account daily
+
+---
+
+## 2.5 AWS EC2 Deployment
+
+### Learn
+
+#### EC2
+
+- Launch instance
+- Security groups
+- SSH connection
+
+#### Deployment
+
+- Install Docker
+- Run container
+
+#### Nginx
+
+- Reverse proxy
+- Port forwarding
+
+#### S3
+
+- Store model backups
+
+#### CloudWatch
+
+- Logs and monitoring basics
+
+---
+
+### Objective
+
+Deploy your application so it is:
+
+- Running on EC2
+- Accessible via public IP
+- Logging requests
 
 ---
 
 ## Flagship Project Progress
 
-Continue developing:
+### Customer Churn Prediction System
 
-### Production Customer Churn Prediction System
+Enhance your existing project by adding:
 
-### Add
+---
 
-API
+### API Layer
 
-- /predict
-- /health
-- /explain
+- /predict → returns prediction
+- /health → system status
+- /explain → SHAP explanation
 
-Database
+---
 
-- PostgreSQL
-- Prediction Logs
+### Database
 
-Containerization
+- Store prediction logs
+- Store request/response history
 
-- Docker
-- Docker Compose
+---
 
-CI/CD
+### Containerization
 
-- GitHub Actions
+- Dockerize the application
+- Add Docker Compose
 
-Deployment
+---
 
-- AWS EC2
-- Nginx
-- S3 Backup
+### CI
+
+- Add GitHub Actions workflow
+
+---
+
+### Deployment
+
+- Deploy to AWS EC2
+- Configure Nginx
+- Store model backup in S3
+
+---
+
+## Expected Outcome
+
+By the end of this phase, you will have:
+
+- A running ML API
+- A containerized system
+- Automated testing setup
+- A deployed cloud application
 
 ---
 
@@ -334,51 +308,32 @@ Deployment
 
 Application
 
-- Production FastAPI API
+- Production-ready FastAPI application
 
 Infrastructure
 
-- Dockerized Application
-- Docker Compose Setup
-- GitHub Actions Workflow
-- AWS EC2 Deployment
-- Nginx Reverse Proxy
-- CloudWatch Logging
-
-Repository
-
-```text
-customer-churn-prediction/
-│
-├── app/
-├── models/
-├── tests/
-├── Dockerfile
-├── docker-compose.yml
-├── .github/
-│   └── workflows/
-├── nginx/
-├── requirements.txt
-└── README.md
-```
+- Dockerized setup
+- Docker Compose configuration
+- GitHub Actions workflow
+- AWS EC2 deployment
+- Nginx configuration
+- CloudWatch logging
 
 ---
 
 ## Skills Gained
 
 - FastAPI
-- Pydantic
+- API Design
 - SQLAlchemy Basics
-- JWT Basics
 - Docker
 - Docker Compose
 - GitHub Actions
-- AWS IAM
-- EC2
+- AWS EC2
 - S3
 - CloudWatch
 - Nginx
-- API Deployment
+- Deployment
 
 ---
 
@@ -386,19 +341,17 @@ customer-churn-prediction/
 
 Move to **Phase 03** only after:
 
-- Completed FastAPI Tutorial.
-- Built all required APIs.
-- Connected FastAPI with PostgreSQL.
-- Dockerized the application.
-- Created Docker Compose setup.
-- Created GitHub Actions workflow.
-- Deployed the application to AWS EC2.
-- Configured Nginx Reverse Proxy.
-- Stored backups in S3.
-- Verified application is publicly accessible.
+- Built working API
+- Connected API to database
+- Dockerized application
+- Created Docker Compose setup
+- Created GitHub Actions workflow
+- Deployed application on EC2
+- Verified public access
+- Basic logging working
 
 ---
 
 ## Ready for Next Phase
 
-In **Phase 03**, you'll learn Deep Learning fundamentals and PyTorch to build neural network models before moving into LLMs.
+In Phase 03, you will learn Deep Learning and PyTorch to build neural networks and move beyond classical ML.
