@@ -1,58 +1,38 @@
----
-
-# 📄 **3. 03_customer_churn_phase08.md (KUBERNETES DEPLOYMENT)**
-
-```markdown
-# Project 03 - Customer Churn (Kubernetes Deployment)
-
-## Phase Mapping
-
-- Phase 08
-- Extends: Project 02 (MLOps)
+# 🚀 Project 03 - Customer Churn (Phase 08 - Kubernetes Deployment)
 
 ---
 
-## Goal
+## 🎯 Objective
 
-Deploy your ML system using Kubernetes.
-
----
-
-## What You Already Have
-
-From Phase 07:
-
-- FastAPI application
-- Dockerized system
-- ML pipeline
+Deploy and scale ML system using Kubernetes.
 
 ---
 
-## What You Will Build NOW
+## 🧠 System Architecture
 
-### Kubernetes Deployment
-
-- Deploy API using Kubernetes
-- Scale application
-- Manage configuration
+Docker Image → Kubernetes Deployment → Pods → Service → API Access
 
 ---
 
-## Tech Stack
+## 📁 Kubernetes Structure
 
-- Kubernetes (kind)
-- kubectl
-- Docker
+```text
+k8s/
+├── deployment.yaml
+├── service.yaml
+├── configmap.yaml
+├── secret.yaml
+```
 
 ---
 
-## Build Steps
+## 🧩 Build Steps
 
-1. Create kind cluster
+1. Create cluster (kind)
 2. Build Docker image
 3. Load image into kind
 4. Create deployment.yaml
-5. Create service.yaml (NodePort)
+5. Create service.yaml
 6. Add ConfigMap
 7. Add Secret
 8. Deploy application
@@ -61,8 +41,41 @@ From Phase 07:
 
 ---
 
-## Architecture
+## ⚙️ Commands
 
-```text
-Docker → Kubernetes Deployment → Pods → Service → API Access
-```
+Create cluster:
+kind create cluster
+
+Build image:
+docker build -t churn-api:v1 .
+
+Load image:
+kind load docker-image churn-api:v1
+
+Deploy:
+kubectl apply -f deployment.yaml  
+kubectl apply -f service.yaml
+
+Scale:
+kubectl scale deployment churn-api --replicas=3
+
+---
+
+## 🌐 API Access
+
+http://<node-ip>:<nodeport>/docs
+
+---
+
+## 🚫 Constraints
+
+- Use lightweight cluster (kind)
+- Avoid complex networking
+
+---
+
+## 🎯 Final Outcome
+
+- Scalable API
+- Multiple replicas
+- Load-balanced system

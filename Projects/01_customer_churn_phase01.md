@@ -25,48 +25,51 @@ Data → Preprocessing → Feature Engineering → Training → Evaluation → M
 
 ## 📁 Project Structure
 
+```text
 project/
 │
 ├── data/
-│   ├── raw/
-│   └── processed/
+│ ├── raw/
+│ └── processed/
 │
 ├── notebooks/
-│   └── eda.ipynb
+│ └── eda.ipynb
 │
 ├── src/
-│   ├── config/
-│   │   └── config_loader.py
-│   │
-│   ├── data/
-│   │   ├── load_data.py
-│   │   └── preprocess.py
-│   │
-│   ├── features/
-│   │   └── build_features.py
-│   │
-│   ├── models/
-│   │   ├── train_model.py
-│   │   └── save_model.py
-│   │
-│   ├── evaluation/
-│   │   └── evaluate.py
-│   │
-│   └── utils/
-│       └── logger.py
+│ ├── config/
+│ │ └── config_loader.py
+│ │
+│ ├── data/
+│ │ ├── load_data.py
+│ │ └── preprocess.py
+│ │
+│ ├── features/
+│ │ └── build_features.py
+│ │
+│ ├── models/
+│ │ ├── train_model.py
+│ │ └── save_model.py
+│ │
+│ ├── evaluation/
+│ │ └── evaluate.py
+│ │
+│ └── utils/
+│ └── logger.py
 │
 ├── models/
-│   └── churn_model.pkl
+│ └── churn_model.pkl
 │
 ├── config.yaml
 ├── requirements.txt
 └── run.py
+```
 
 ---
 
 ## ⚙️ Configuration
 
 Use config.yaml for:
+
 - dataset path
 - model parameters
 - output paths
@@ -75,34 +78,35 @@ Use config.yaml for:
 
 ## 🧩 Build Steps
 
-1. Load dataset  
-2. Clean data  
-3. Perform EDA  
-4. Feature engineering  
-5. Train model (XGBoost preferred)  
-6. Evaluate model  
-7. Save model using joblib  
+1. Load dataset
+2. Clean data
+3. Perform EDA
+4. Feature engineering
+5. Train model (XGBoost preferred)
+6. Evaluate model
+7. Save model using joblib
 
 ---
 
 ## 📦 Output
 
-- churn_model.pkl  
-- evaluation metrics  
+- churn_model.pkl
+- evaluation metrics
 
 ---
 
 ## 🚫 Constraints
 
-- No API  
-- No Docker  
-- No deployment  
+- No API
+- No Docker
+- No deployment
 
 ---
 
 ## 🔮 Future Compatibility
 
 Will be extended with:
+
 - MLOps (Phase 07)
 - Kubernetes (Phase 08)
 

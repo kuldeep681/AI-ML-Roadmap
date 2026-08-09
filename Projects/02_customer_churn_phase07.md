@@ -1,66 +1,81 @@
-# Project 02 - Customer Churn (MLOps Upgrade)
-
-## Phase Mapping
-
-- Phase 07
-- Extends: Project 01
+# 🚀 Project 02 - Customer Churn (Phase 07 - MLOps Upgrade)
 
 ---
 
-## Goal
+## 🎯 Objective
 
-Convert your ML model into a production-grade ML pipeline using MLOps.
-
----
-
-## What You Already Have
-
-From Phase 01:
-
-- Trained ML model
-- Training code
-- Dataset
+Convert ML system into a production-grade MLOps pipeline.
 
 ---
 
-## What You Will Build NOW
+## 🧠 System Architecture
 
-### MLOps System
-
-- Data validation
-- Data versioning
-- Experiment tracking
-- Model registry
-- Automated pipeline
+Data → Validation → Versioning → Training → Tracking → Registry → API → Docker
 
 ---
 
-## Tech Stack
+## 📁 Updated Project Structure
 
-- Pandera
-- DVC
-- MLflow
-- Prefect
-- FastAPI
-- Docker (basic)
+```text
+project/
+│
+├── data/
+│
+├── src/
+│ ├── validation/
+│ │ └── schema.py
+│ │
+│ ├── pipelines/
+│ │ └── training_pipeline.py
+│ │
+│ ├── api/
+│ │ ├── main.py
+│ │ └── routes.py
+│ │
+│ └── models/
+│
+├── dvc.yaml
+├── Dockerfile
+├── requirements.txt
+```
 
 ---
 
-## Build Steps
+## 🧩 Build Steps
 
 1. Add Pandera validation
-2. Setup DVC for dataset
+2. Setup DVC
 3. Integrate MLflow
 4. Track experiments
-5. Register best model
+5. Register model
 6. Create Prefect pipeline
-7. Build FastAPI for inference
+7. Build FastAPI
 8. Dockerize application
 
 ---
 
-## Pipeline Architecture
+## 🔌 API Specification
 
-```text
-Data → Validation → DVC → Training → MLflow → Model Registry → API
-```
+Endpoint: POST /predict
+
+Response:
+{
+"prediction": 1,
+"probability": 0.82
+}
+
+---
+
+## 🚫 Constraints
+
+- Lightweight system
+- Free-tier friendly
+- Avoid heavy tools
+
+---
+
+## 🎯 Final Outcome
+
+- Reproducible ML pipeline
+- Experiment tracking
+- Dockerized API
