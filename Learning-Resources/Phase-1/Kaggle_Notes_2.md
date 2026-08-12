@@ -4205,5 +4205,3 @@ XGBoost
    ↓
 Leakage Prevention
 ```
-
-The next stage is the **hands-on exercise notebooks**, where these concepts are applied to actual datasets.
